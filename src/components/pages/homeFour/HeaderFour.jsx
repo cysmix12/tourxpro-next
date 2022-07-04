@@ -1,48 +1,48 @@
-import React, { useEffect, useReducer, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useReducer, useState } from 'react';
+import Link from 'next/link';
 
 function HeaderFour() {
   const [searchActive, setSearchActive] = useState(0);
   const [catagoryActive, setCatagoryActive] = useState(0);
   const [userDropdown, setuserDropdown] = useState(0);
   const [mobileSideberMenu, setMobileSideberMenu] = useState(0);
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   /*useing reducer to manage the active or inactive menu*/
 
   useEffect(() => {
     // Add scroll event when the component is loaded
-    window.addEventListener("scroll", isSticky);
+    window.addEventListener('scroll', isSticky);
     return () => {
-      window.removeEventListener("scroll", isSticky);
+      window.removeEventListener('scroll', isSticky);
     };
   });
   /* Method that will fix header after a specific scrollable */
   const isSticky = (e) => {
-    const header = document.querySelector("header");
+    const header = document.querySelector('header');
     const scrollTop = window.scrollY;
     scrollTop >= 200
-      ? header.classList.add("sticky")
-      : header.classList.remove("sticky");
+      ? header.classList.add('sticky')
+      : header.classList.remove('sticky');
   };
 
-  const initialState = { activeMenu: "" };
+  const initialState = { activeMenu: '' };
   const [state, dispatch] = useReducer(reducer, initialState);
 
   function reducer(state, action) {
     switch (action.type) {
-      case "homeOne":
-        return { activeMenu: "homeOne" };
-      case "page":
-        return { activeMenu: "page" };
-      case "package":
-        return { activeMenu: "package" };
-      case "blog":
-        return { activeMenu: "blog" };
-      case "destination":
-        return { activeMenu: "destination" };
+      case 'homeOne':
+        return { activeMenu: 'homeOne' };
+      case 'page':
+        return { activeMenu: 'page' };
+      case 'package':
+        return { activeMenu: 'package' };
+      case 'blog':
+        return { activeMenu: 'blog' };
+      case 'destination':
+        return { activeMenu: 'destination' };
       default:
-        return { activeMenu: " " };
+        return { activeMenu: ' ' };
     }
   }
   const handleSearhBar = () => {
@@ -76,7 +76,7 @@ function HeaderFour() {
   return (
     <>
       <div
-        className={searchActive === 1 ? "mobile-search slide" : "mobile-search"}
+        className={searchActive === 1 ? 'mobile-search slide' : 'mobile-search'}
       >
         <div className="container">
           <div className="row d-flex justify-content-center">
@@ -98,8 +98,8 @@ function HeaderFour() {
       <div
         className={
           catagoryActive === 1
-            ? "category-sidebar-wrapper category-active"
-            : "category-sidebar-wrapper"
+            ? 'category-sidebar-wrapper category-active'
+            : 'category-sidebar-wrapper'
         }
       >
         <div className="category-sidebar">
@@ -113,106 +113,99 @@ function HeaderFour() {
             <div className="col">
               <Link
                 className="category-box"
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
                 onClick={scrollTop}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate1.svg"}
-                    alt=""
-                  />
-                </div>
-                <h5>Adventure</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate1.svg'} alt="" />
+                  </div>
+                  <h5>Adventure</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
                 onClick={scrollTop}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate2.svg"}
-                    alt=""
-                  />
-                </div>
-                <h5>Group Tour</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate2.svg'} alt="" />
+                  </div>
+                  <h5>Group Tour</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
                 onClick={scrollTop}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate3.svg"}
-                    alt=""
-                  />
-                </div>
-                <h5>Couple Tour</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate3.svg'} alt="" />
+                  </div>
+                  <h5>Couple Tour</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
                 onClick={scrollTop}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate4.svg"}
-                    alt=""
-                  />
-                </div>
-                <h5>Single Tour</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate4.svg'} alt="" />
+                  </div>
+                  <h5>Single Tour</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
                 onClick={scrollTop}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate5.svg"}
-                    alt=""
-                  />
-                </div>
-                <h5>Honeymoon</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate5.svg'} alt="" />
+                  </div>
+                  <h5>Honeymoon</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
                 onClick={scrollTop}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate6.svg"}
-                    alt=""
-                  />
-                </div>
-                <h5>Sea Beach</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate6.svg'} alt="" />
+                  </div>
+                  <h5>Sea Beach</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
                 onClick={scrollTop}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate7.svg"}
-                    alt=""
-                  />
-                </div>
-                <h5>Mountain Tour</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate7.svg'} alt="" />
+                  </div>
+                  <h5>Mountain Tour</h5>
+                </>
               </Link>
             </div>
           </div>
@@ -225,11 +218,11 @@ function HeaderFour() {
               <div className="topbar-contact-left">
                 <ul className="contact-list">
                   <li>
-                    <i className="bi bi-telephone-fill" />{" "}
+                    <i className="bi bi-telephone-fill" />{' '}
                     <a href="tel:+17632275032">+1 763-227-5032</a>
                   </li>
                   <li>
-                    <i className="bi bi-envelope-fill" />{" "}
+                    <i className="bi bi-envelope-fill" />{' '}
                     <a href="mailto:info@example.com">info@example.com</a>
                   </li>
                 </ul>
@@ -238,22 +231,22 @@ function HeaderFour() {
             <div className="col-xl-6 col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center align-items-center">
               <ul className="topbar-social-links">
                 <li>
-                  <Link to={"#"}>
+                  <Link href={'#'}>
                     <i className="bx bxl-facebook" />
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link href={'#'}>
                     <i className="bx bxl-instagram-alt" />
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link href={'#'}>
                     <i className="bx bxl-twitter" />
                   </Link>
                 </li>
                 <li>
-                  <Link to={"#"}>
+                  <Link href={'#'}>
                     <i className="bx bxl-pinterest" />
                   </Link>
                 </li>
@@ -268,11 +261,8 @@ function HeaderFour() {
             <div className="row">
               <div className="col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-items-center d-xl-flex d-lg-block">
                 <div className="nav-logo d-flex justify-content-between align-items-center">
-                  <Link to={"#"} onClick={scrollTop}>
-                    <img
-                      src={process.env.PUBLIC_URL + "/images/logo-w.png"}
-                      alt="logo"
-                    />
+                  <Link href={'#'} onClick={scrollTop}>
+                    <img src={'/images/logo-w.png'} alt="logo" />
                   </Link>
                   <div className="mobile-menu d-flex ">
                     <div className="d-flex align-items-center">
@@ -285,21 +275,21 @@ function HeaderFour() {
                           <ul
                             className={
                               userDropdown === 1
-                                ? "user-drop-list account-drop-active"
-                                : "user-drop-list"
+                                ? 'user-drop-list account-drop-active'
+                                : 'user-drop-list'
                             }
                           >
                             <li>
-                              <Link to={"#"}>My Account</Link>
+                              <Link href={'#'}>My Account</Link>
                             </li>
                             <li>
-                              <Link to={"#"}>Login</Link>
+                              <Link href={'#'}>Login</Link>
                             </li>
                             <li>
-                              <Link to={"#"}>Registration</Link>
+                              <Link href={'#'}>Registration</Link>
                             </li>
                             <li>
-                              <Link to={"#"}>Setting</Link>
+                              <Link href={'#'}>Setting</Link>
                             </li>
                           </ul>
                         </div>
@@ -311,17 +301,19 @@ function HeaderFour() {
                         </div>
                       </div>
                       <Link
-                        to={"#"}
+                        href={'#'}
                         className={
                           mobileSideberMenu === 1
-                            ? "hamburger d-block d-xl-none h-active"
-                            : "hamburger d-block d-xl-none"
+                            ? 'hamburger d-block d-xl-none h-active'
+                            : 'hamburger d-block d-xl-none'
                         }
                         onClick={handleMobileSiderbar}
                       >
-                        <span className="h-top" />
-                        <span className="h-middle" />
-                        <span className="h-bottom" />
+                        <>
+                          <span className="h-top" />
+                          <span className="h-middle" />
+                          <span className="h-bottom" />
+                        </>
                       </Link>
                     </div>
                   </div>
@@ -330,98 +322,77 @@ function HeaderFour() {
               <div className="col-xxl-7 col-xl-8 col-lg-9 col-md-8 col-sm-6 col-xs-6">
                 <nav
                   className={
-                    mobileSideberMenu === 1 ? "main-nav slidenav" : "main-nav"
+                    mobileSideberMenu === 1 ? 'main-nav slidenav' : 'main-nav'
                   }
                 >
                   <div className="inner-logo d-xl-none text-center">
-                    <Link to={"#"}>
-                      <img
-                        src={process.env.PUBLIC_URL + "/images/logo.png"}
-                        alt=""
-                      />
+                    <Link href={'#'}>
+                      <img src={'/images/logo.png'} alt="" />
                     </Link>
                   </div>
                   <ul>
                     <li
                       className="has-child-menu"
-                      onClick={() => dispatch({ type: "homeOne" })}
+                      onClick={() => dispatch({ type: 'homeOne' })}
                     >
-                      <Link to={"#"}>Home</Link>
+                      <Link href={'#'}>Home</Link>
                       <i className="fl flaticon-plus">+</i>
                       <ul
                         className={
-                          state.activeMenu === "homeOne"
-                            ? "sub-menu d-block"
-                            : "sub-menu d-none"
+                          state.activeMenu === 'homeOne'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
                         }
                       >
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/`}
-                          >
+                          <Link onClick={scrollTop} href={`/`}>
                             Home Style 1
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}index2`}
-                          >
+                          <Link onClick={scrollTop} href={`index2`}>
                             Home Style 2
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/index3`}
-                          >
+                          <Link onClick={scrollTop} href={`/index3`}>
                             Home Style 3
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/index4`}
-                          >
+                          <Link onClick={scrollTop} href={`/index4`}>
                             Home Style 4
                           </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/about`}
-                      >
+                      <Link onClick={scrollTop} href={`/about`}>
                         About Us
                       </Link>
                     </li>
                     <li
                       className="has-child-menu "
-                      onClick={() => dispatch({ type: "destination" })}
+                      onClick={() => dispatch({ type: 'destination' })}
                     >
-                      <Link to={"#"}>Destination</Link>
+                      <Link href={'#'}>Destination</Link>
                       <i className="fl flaticon-plus">+</i>
                       <ul
                         className={
-                          state.activeMenu === "destination"
-                            ? "sub-menu d-block"
-                            : "sub-menu d-none"
+                          state.activeMenu === 'destination'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
                         }
                       >
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/destination`}
-                          >
+                          <Link onClick={scrollTop} href={`/destination`}>
                             Destination
                           </Link>
                         </li>
                         <li>
                           <Link
                             onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/destination-details`}
+                            href={`/destination-details`}
                           >
                             Destination Details
                           </Link>
@@ -430,93 +401,69 @@ function HeaderFour() {
                     </li>
                     <li
                       className="has-child-menu"
-                      onClick={() => dispatch({ type: "package" })}
+                      onClick={() => dispatch({ type: 'package' })}
                     >
-                      <Link to={"#"}>Package</Link>
+                      <Link href={'#'}>Package</Link>
                       <i className="fl flaticon-plus">+</i>
                       <ul
                         className={
-                          state.activeMenu === "package"
-                            ? "sub-menu d-block"
-                            : "sub-menu d-none"
+                          state.activeMenu === 'package'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
                         }
                       >
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package`}
-                          >
+                          <Link onClick={scrollTop} href={`/package`}>
                             Package Grid
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-sidebar`}
-                          >
+                          <Link onClick={scrollTop} href={`/package-sidebar`}>
                             Package Sidebar
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-standard`}
-                          >
+                          <Link onClick={scrollTop} href={`/package-standard`}>
                             Package Standard
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-details`}
-                          >
-                            Package Details{" "}
+                          <Link onClick={scrollTop} href={`/package-details`}>
+                            Package Details
                           </Link>
                         </li>
                       </ul>
                     </li>
                     <li
                       className="has-child-menu"
-                      onClick={() => dispatch({ type: "blog" })}
+                      onClick={() => dispatch({ type: 'blog' })}
                     >
-                      <Link to={"#"}>Blogs</Link>
+                      <Link href={'#'}>Blogs</Link>
                       <i className="fl flaticon-plus">+</i>
                       <ul
                         className={
-                          state.activeMenu === "blog"
-                            ? "sub-menu d-block"
-                            : "sub-menu d-none"
+                          state.activeMenu === 'blog'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
                         }
                       >
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/blog`}
-                          >
+                          <Link onClick={scrollTop} href={`/blog`}>
                             Blog Grid
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/blog-sidebar`}
-                          >
+                          <Link onClick={scrollTop} href={`/blog-sidebar`}>
                             Blog Sidebar
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/blog-standard`}
-                          >
-                            Blog Standard{" "}
+                          <Link onClick={scrollTop} href={`/blog-standard`}>
+                            Blog Standard
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/blog-details`}
-                          >
+                          <Link onClick={scrollTop} href={`/blog-details`}>
                             Blog Details
                           </Link>
                         </li>
@@ -524,67 +471,52 @@ function HeaderFour() {
                     </li>
                     <li
                       className="has-child-menu"
-                      onClick={() => dispatch({ type: "page" })}
+                      onClick={() => dispatch({ type: 'page' })}
                     >
-                      <Link to={"#"}>Pages</Link>
+                      <Link href={'#'}>Pages</Link>
                       <i className="fl flaticon-plus">+</i>
                       <ul
                         className={
-                          state.activeMenu === "page"
-                            ? "sub-menu d-block"
-                            : "sub-menu d-none"
+                          state.activeMenu === 'page'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
                         }
                       >
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/guide`}
-                          >
+                          <Link onClick={scrollTop} href={`/guide`}>
                             Guide
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/gallery`}
-                          >
+                          <Link onClick={scrollTop} href={`/gallery`}>
                             Gallary
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/faq`}
-                          >
+                          <Link onClick={scrollTop} href={`/faq`}>
                             FAQ
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/error`}
-                          >
+                          <Link onClick={scrollTop} href={`/error`}>
                             404
                           </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/contact`}
-                      >
+                      <Link onClick={scrollTop} href={`/contact`}>
                         Contact Us
                       </Link>
                     </li>
                   </ul>
                   <div className="inner-contact-options d-xl-none">
                     <div className="contact-box-inner">
-                      <i className="bi bi-telephone-fill" />{" "}
+                      <i className="bi bi-telephone-fill" />{' '}
                       <a href="tel:+17632275032">+1 763-227-5032</a>
                     </div>
                     <div className="contact-box-inner">
-                      <i className="bi bi-envelope-fill" />{" "}
+                      <i className="bi bi-envelope-fill" />{' '}
                       <a href="mailto:info@example.com">info@example.com</a>
                     </div>
                   </div>
@@ -608,13 +540,7 @@ function HeaderFour() {
                   </div>
                   <div className="nav-right-hotline d-xxl-flex d-none">
                     <div className="hotline-icon">
-                      <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/images/icons/header-phone.svg"
-                        }
-                        alt=""
-                      />
+                      <img src={'/images/icons/header-phone.svg'} alt="" />
                     </div>
                     <div className="hotline-info">
                       <span>Hot Line Number</span>
