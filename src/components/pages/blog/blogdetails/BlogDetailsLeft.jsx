@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function BlogDetailsLeft() {
   return (
@@ -12,23 +12,26 @@ function BlogDetailsLeft() {
               lacinia sapien. Sed pretium.
             </h2>
             <div className="post-meta">
-              <Link to={"#"} className="blog-writer">
-                <i className="bi bi-person-circle" /> By John Smith
+              <Link href={'#'} className="blog-writer">
+                <>
+                  <i className="bi bi-person-circle" /> By John Smith
+                </>
               </Link>
-              <Link to={"#"} className="blog-comments">
-                <i className="bi bi-calendar3" /> Novembar 16, 2021
+              <Link href={'#'} className="blog-comments">
+                <>
+                  <i className="bi bi-calendar3" /> Novembar 16, 2021
+                </>
               </Link>
-              <Link to={"#"} className="blog-comments">
-                <i className="bi bi-chat-left-quote" /> Comment (08)
+              <Link href={'#'} className="blog-comments">
+                <>
+                  <i className="bi bi-chat-left-quote" /> Comment (08)
+                </>
               </Link>
             </div>
           </div>
 
           <div className="post-thumb">
-            <img
-              src={process.env.PUBLIC_URL + "/images/blog/blog-thumb-xl1.png"}
-              alt="blogDetailsIMG"
-            />
+            <img src={'/images/blog/blog-thumb-xl1.png'} alt="blogDetailsIMG" />
           </div>
           <div className="post-header"></div>
           <div className="post-body">
@@ -52,10 +55,7 @@ function BlogDetailsLeft() {
             </p>
             <div className="blog-quote-box-one d-flex flex-column flex-sm-row">
               <div className="quote-icon">
-                <img
-                  src={process.env.PUBLIC_URL + "/images/icons/blogquote.svg"}
-                  alt="blogDetailsIMG"
-                />
+                <img src={'/images/icons/blogquote.svg'} alt="blogDetailsIMG" />
               </div>
               <blockquote>
                 <p>
@@ -77,10 +77,7 @@ function BlogDetailsLeft() {
               Suspendissendt blandit interdum.
             </p>
             <div className="post-innner-image">
-              <img
-                src={process.env.PUBLIC_URL + "/images/blog/blog-d-inner.png"}
-                alt="blogDetailsIMG"
-              />
+              <img src={'/images/blog/blog-d-inner.png'} alt="blogDetailsIMG" />
             </div>
             <h3 className="sub-title">Things You Can Do to a vibe</h3>
             <p className="mt-1">
@@ -95,10 +92,7 @@ function BlogDetailsLeft() {
             </p>
             <div className="blog-quote-box-two text-center">
               <div className="quote-icon">
-                <img
-                  src={process.env.PUBLIC_URL + "/images/icons/blogquote.svg"}
-                  alt="blogDetailsIMG"
-                />
+                <img src={'/images/icons/blogquote.svg'} alt="blogDetailsIMG" />
               </div>
               <blockquote>
                 <p>
@@ -122,15 +116,19 @@ function BlogDetailsLeft() {
             </p>
           </div>
           <div className="post-footer flex-wrap flex-md-nowrap">
-            <Link to={"#"} className="post-switcher prev-post">
-              <i className="bi bi-chevron-left" /> Previous
+            <Link href={'#'} className="post-switcher prev-post">
+              <>
+                <i className="bi bi-chevron-left" /> Previous
+              </>
             </Link>
-            <Link to={"#"} className="next-post-link">
+            <Link href={'#'} className="next-post-link">
               Hendrerit a id lectus. Suspendissendt blandit interdum. Sed
               pellentesque at nunc eget consente.
             </Link>
-            <Link to={"#"} className="post-switcher next-post">
-              Next <i className="bi bi-chevron-right" />
+            <Link href={'#'} className="post-switcher next-post">
+              <>
+                Next <i className="bi bi-chevron-right" />
+              </>
             </Link>
           </div>
         </div>
@@ -140,9 +138,7 @@ function BlogDetailsLeft() {
             <li className="single-comment d-flex flex-sm-row flex-column ">
               <div className="commmentor">
                 <img
-                  src={
-                    process.env.PUBLIC_URL + "/images/reviewer/commertor2.png"
-                  }
+                  src={'/images/reviewer/commertor2.png'}
                   alt="BlogDetails"
                 />
               </div>
@@ -175,8 +171,10 @@ function BlogDetailsLeft() {
                   lacinia ipsum. Cibuses acUt sed lacinia ipsum. Suspendisse
                 </p>
                 <div className="reply-btn">
-                  <Link to={"#"}>
-                    <i className="bi bi-reply-all-fill" /> Reply
+                  <Link href={'#'}>
+                    <>
+                      <i className="bi bi-reply-all-fill" /> Reply
+                    </>
                   </Link>
                 </div>
               </div>
@@ -184,9 +182,7 @@ function BlogDetailsLeft() {
             <li className="single-comment d-flex flex-sm-row flex-column">
               <div className="commmentor">
                 <img
-                  src={
-                    process.env.PUBLIC_URL + "/images/reviewer/commertor3.png"
-                  }
+                  src={'/images/reviewer/commertor3.png'}
                   alt="BlogDetails"
                 />
               </div>
@@ -219,8 +215,10 @@ function BlogDetailsLeft() {
                   lacinia ipsum. Cibuses acUt sed lacinia ipsum. Suspendisse
                 </p>
                 <div className="reply-btn">
-                  <Link to={"#"}>
-                    <i className="bi bi-reply-all-fill" /> Reply
+                  <Link href={'#'}>
+                    <>
+                      <i className="bi bi-reply-all-fill" /> Reply
+                    </>
                   </Link>
                 </div>
               </div>
@@ -228,9 +226,7 @@ function BlogDetailsLeft() {
             <li className="single-comment d-flex flex-sm-row flex-column">
               <div className="commmentor">
                 <img
-                  src={
-                    process.env.PUBLIC_URL + "/images/reviewer/commertor1.png"
-                  }
+                  src={'/images/reviewer/commertor1.png'}
                   alt="BlogDetails"
                 />
               </div>
@@ -263,15 +259,17 @@ function BlogDetailsLeft() {
                   lacinia ipsum. Cibuses acUt sed lacinia ipsum. Suspendisse
                 </p>
                 <div className="reply-btn">
-                  <Link to={"#"}>
-                    <i className="bi bi-reply-all-fill" /> Reply
+                  <Link href={'#'}>
+                    <>
+                      <i className="bi bi-reply-all-fill" /> Reply
+                    </>
                   </Link>
                 </div>
               </div>
             </li>
           </ul>
           <div className="comment-btn text-center">
-            <Link to={"#"}>View All Comment</Link>
+            <Link href={'#'}>View All Comment</Link>
           </div>
         </div>
         <form
@@ -302,7 +300,7 @@ function BlogDetailsLeft() {
                 cols={20}
                 rows={7}
                 placeholder="Write Message"
-                defaultValue={""}
+                defaultValue={''}
               />
             </div>
             <ul className="form-rating d-flex">

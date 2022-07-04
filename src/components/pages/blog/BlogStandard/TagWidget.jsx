@@ -1,8 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function TagWidget() {
-  
   return (
     <>
       <aside className="blog-widget widget-tag-cloud mt-30">
@@ -10,15 +9,15 @@ function TagWidget() {
           <h4>Tags</h4>
         </div>
         <div className="tag-cloud widget-body">
-          <Link to={"#"}>Adventure</Link>
-          <Link to={"#"}>Trip</Link>
-          <Link to={"#"}>Guided</Link>
-          <Link to={"#"}>Historical</Link>
-          <Link to={"#"}>Road Trips</Link>
-          <Link to={"#"}>Tourist</Link>
-          <Link to={"#"}>Cultural</Link>
-          <Link to={"#"}>Natural Tour</Link>
-          <Link to={"#"}>Journey</Link>
+          <Link href={'#'}>Adventure</Link>
+          <Link href={'#'}>Trip</Link>
+          <Link href={'#'}>Guided</Link>
+          <Link href={'#'}>Historical</Link>
+          <Link href={'#'}>Road Trips</Link>
+          <Link href={'#'}>Tourist</Link>
+          <Link href={'#'}>Cultural</Link>
+          <Link href={'#'}>Natural Tour</Link>
+          <Link href={'#'}>Journey</Link>
         </div>
       </aside>
     </>

@@ -1,12 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React from 'react';
+import Link from 'next/link';
 
 function BlogNewPostWidget() {
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  
+
   return (
     <>
       <aside className="blog-widget widget-recent-entries-custom mt-30">
@@ -16,19 +15,16 @@ function BlogNewPostWidget() {
         <ul className="widget-body">
           <li className="clearfix">
             <div className="wi">
-              <Link
-                onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/blog-details`}
-              >
-                <img src={process.env.PUBLIC_URL + "/images/blog/blog-thumb-sm1.png"} alt="BlogStandardIMG" />
+              <Link onClick={scrollTop} href={`/blog-details`}>
+                <img
+                  src={'/images/blog/blog-thumb-sm1.png'}
+                  alt="BlogStandardIMG"
+                />
               </Link>
             </div>
             <div className="wb">
               <h6>
-                <Link
-                  onClick={scrollTop}
-                  to={`${process.env.PUBLIC_URL}/blog-details`}
-                >
+                <Link onClick={scrollTop} href={`/blog-details`}>
                   Map where your photos were taken and discover local points.
                 </Link>
               </h6>
@@ -44,19 +40,16 @@ function BlogNewPostWidget() {
           </li>
           <li className="clearfix">
             <div className="wi">
-              <Link
-                onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/blog-details`}
-              >
-                <img src={process.env.PUBLIC_URL + "/images/blog/blog-thumb-sm2.png"} alt="BlogStandardIMG" />
+              <Link onClick={scrollTop} href={`/blog-details`}>
+                <img
+                  src={'/images/blog/blog-thumb-sm2.png'}
+                  alt="BlogStandardIMG"
+                />
               </Link>
             </div>
             <div className="wb">
               <h6>
-                <Link
-                  onClick={scrollTop}
-                  to={`${process.env.PUBLIC_URL}/blog-details`}
-                >
+                <Link onClick={scrollTop} href={`/blog-details`}>
                   San francisco golden gate bridge, cable cars &amp; fog.
                 </Link>
               </h6>
@@ -72,19 +65,16 @@ function BlogNewPostWidget() {
           </li>
           <li className="clearfix">
             <div className="wi">
-              <Link
-                onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/blog-details`}
-              >
-                <img src={process.env.PUBLIC_URL + "/images/blog/blog-thumb-sm3.png"} alt="BlogStandardIMG" />
+              <Link onClick={scrollTop} href={`/blog-details`}>
+                <img
+                  src={'/images/blog/blog-thumb-sm3.png'}
+                  alt="BlogStandardIMG"
+                />
               </Link>
             </div>
             <div className="wb">
               <h6>
-                <Link
-                  onClick={scrollTop}
-                  to={`${process.env.PUBLIC_URL}/blog-details`}
-                >
+                <Link onClick={scrollTop} href={`/blog-details`}>
                   Vestibulum luctus hendrerit verba neque, et blandit.
                 </Link>
               </h6>
@@ -100,19 +90,16 @@ function BlogNewPostWidget() {
           </li>
           <li className="clearfix">
             <div className="wi">
-              <Link
-                onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/blog-details`}
-              >
-                <img src={process.env.PUBLIC_URL + "/images/blog/blog-thumb-sm4.png"} alt="BlogStandardIMG" />
+              <Link onClick={scrollTop} href={`/blog-details`}>
+                <img
+                  src={'/images/blog/blog-thumb-sm4.png'}
+                  alt="BlogStandardIMG"
+                />
               </Link>
             </div>
             <div className="wb">
               <h6>
-                <Link
-                  onClick={scrollTop}
-                  to={`${process.env.PUBLIC_URL}/blog-details`}
-                >
+                <Link onClick={scrollTop} href={`/blog-details`}>
                   Aenean auctor porta sodales anve suspendisse fringilla.
                 </Link>
               </h6>

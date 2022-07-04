@@ -1,6 +1,6 @@
-import React from "react";
-import Breadcrumb from "../../../common/Breadcrumb";
-import BlogDetailsWrap from "./BlogDetailsWrap";
+import React from 'react';
+import Breadcrumb from '../../../common/Breadcrumb';
+import BlogDetailsWrap from './BlogDetailsWrap';
 
 function BlogDetailsPage() {
   return (
