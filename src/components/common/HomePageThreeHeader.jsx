@@ -437,7 +437,7 @@ function HomePageThreeHeader() {
                           </Link>
                         </li>
                         <li>
-                          <Link href={`/gallary`} onClick={scrollTop}>
+                          <Link href={`/gallery`} onClick={scrollTop}>
                             Gallary
                           </Link>
                         </li>

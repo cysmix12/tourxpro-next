@@ -1,7 +1,7 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation } from "swiper";
-import { SRLWrapper } from "simple-react-lightbox";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation } from 'swiper';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -18,8 +18,8 @@ function GallaryWrapper() {
       delay: 9000,
     },
     navigation: {
-      nextEl: ".gallary-next1",
-      prevEl: ".gallary-prev1",
+      nextEl: '.gallary-next1',
+      prevEl: '.gallary-prev1',
     },
 
     breakpoints: {
@@ -48,8 +48,8 @@ function GallaryWrapper() {
       delay: 12000,
     },
     navigation: {
-      nextEl: ".gallary-next2",
-      prevEl: ".gallary-prev2",
+      nextEl: '.gallary-next2',
+      prevEl: '.gallary-prev2',
     },
     breakpoints: {
       480: {
@@ -103,73 +103,46 @@ function GallaryWrapper() {
                       <SwiperSlide className="swiper-slide">
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-sm1.png"
-                            }
+                            src={'/images/gallary/g-sm1.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourfullscreen02.png"
-                            }
+                            href={'/images/gallary/tourfullscreen02.png'}
                             className="gallary-item-overlay"
                           >
                             <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                "/images/gallary/g-sm1.png"
-                              }
+                              src={'/images/gallary/g-sm1.png'}
                               alt="ImageGallery"
                             />
                           </a>
                         </div>
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-sm2.png"
-                            }
+                            src={'/images/gallary/g-sm2.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourfullscreen07.png"
-                            }
+                            href={'/images/gallary/tourfullscreen07.png'}
                             className="gallary-item-overlay"
                           >
-                             <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                "/images/gallary/g-sm2.png"
-                              }
+                            <img
+                              src={'/images/gallary/g-sm2.png'}
                               alt="ImageGallery"
                             />
                           </a>
                         </div>
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-11.png"
-                            }
+                            src={'/images/gallary/g-11.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourfullscreen03.png"
-                            }
+                            href={'/images/gallary/tourfullscreen03.png'}
                             className="gallary-item-overlay"
                           >
-                            {" "}
+                            {' '}
                             <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                "/images/gallary/g-11.png"
-                              }
+                              src={'/images/gallary/g-11.png'}
                               alt="ImageGallery"
                             />
                           </a>
@@ -178,100 +151,64 @@ function GallaryWrapper() {
                       <SwiperSlide className="swiper-slide">
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-xl1.png"
-                            }
+                            src={'/images/gallary/g-xl1.png'}
                             alt="ImageGallery"
                           />
                           <a
                             className="gallary-item-overlay"
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourfullscreen04.png"
-                            }
+                            href={'/images/gallary/tourfullscreen04.png'}
                           >
                             <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                "/images/gallary/g-xl1.png"
-                              }
+                              src={'/images/gallary/g-xl1.png'}
                               alt="ImageGallery"
                             />
                           </a>
                         </div>
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-12.png"
-                            }
+                            src={'/images/gallary/g-12.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourfullscreen05.png"
-                            }
+                            href={'/images/gallary/tourfullscreen05.png'}
                             className="gallary-item-overlay"
                           >
-                             <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-12.png"
-                            }
-                            alt="ImageGallery"
-                          />
+                            <img
+                              src={'/images/gallary/g-12.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide className="swiper-slide">
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-xl2.png"
-                            }
+                            src={'/images/gallary/g-xl2.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourfullscreen01.png"
-                            }
+                            href={'/images/gallary/tourfullscreen01.png'}
                             className="gallary-item-overlay"
                           >
-                               <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-xl2.png"
-                            }
-                            alt="ImageGallery"
-                          />
+                            <img
+                              src={'/images/gallary/g-xl2.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-13.png"
-                            }
+                            src={'/images/gallary/g-13.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourfullscreen06.png"
-                            }
+                            href={'/images/gallary/tourfullscreen06.png'}
                             className="gallary-item-overlay"
                           >
-                               <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-13.png"
-                            }
-                            alt="ImageGallery"
-                          />
+                            <img
+                              src={'/images/gallary/g-13.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                       </SwiperSlide>
@@ -312,173 +249,111 @@ function GallaryWrapper() {
                       <SwiperSlide className="swiper-slide">
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-sm3.png"
-                            }
+                            src={'/images/gallary/g-sm3.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourgideFullimg2.png"
-                            }
+                            href={'/images/gallary/tourgideFullimg2.png'}
                             className="gallary-item-overlay"
                           >
-                          <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-sm3.png"
-                            }
-                            alt="ImageGallery"
-                          />
+                            <img
+                              src={'/images/gallary/g-sm3.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-sm4.png"
-                            }
+                            src={'/images/gallary/g-sm4.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourgideFullimg4.png"
-                            }
+                            href={'/images/gallary/tourgideFullimg4.png'}
                             className="gallary-item-overlay"
                           >
                             <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-sm4.png"
-                            }
-                            alt="ImageGallery"
-                          />
+                              src={'/images/gallary/g-sm4.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-16.png"
-                            }
+                            src={'/images/gallary/g-16.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourgideFullimg7.png"
-                            }
+                            href={'/images/gallary/tourgideFullimg7.png'}
                             className="gallary-item-overlay"
                           >
                             <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-16.png"
-                            }
-                            alt="ImageGallery"
-                          />
+                              src={'/images/gallary/g-16.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide className="swiper-slide">
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-xl4.png"
-                            }
+                            src={'/images/gallary/g-xl4.png'}
                             alt="ImageGallery"
                           />
                           <a
                             className="gallary-item-overlay"
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourgideFullimg5.png"
-                            }
+                            href={'/images/gallary/tourgideFullimg5.png'}
                           >
-                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-xl4.png"
-                            }
-                            alt="ImageGallery"
-                          />
+                            <img
+                              src={'/images/gallary/g-xl4.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-15.png"
-                            }
+                            src={'/images/gallary/g-15.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourgideFullimg1.png"
-                            }
+                            href={'/images/gallary/tourgideFullimg1.png'}
                             className="gallary-item-overlay"
                           >
-                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-15.png"
-                            }
-                            alt="ImageGallery"
-                          />
+                            <img
+                              src={'/images/gallary/g-15.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide className="swiper-slide">
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-xl3.png"
-                            }
+                            src={'/images/gallary/g-xl3.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourgideFullimg3.png"
-                            }
+                            href={'/images/gallary/tourgideFullimg3.png'}
                             className="gallary-item-overlay"
                           >
-                              <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-xl3.png"
-                            }
-                            alt="ImageGallery"
-                          />
+                            <img
+                              src={'/images/gallary/g-xl3.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                         <div className="gallary-item">
                           <img
-                            src={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/g-14.png"
-                            }
+                            src={'/images/gallary/g-14.png'}
                             alt="ImageGallery"
                           />
                           <a
-                            href={
-                              process.env.PUBLIC_URL +
-                              "/images/gallary/tourgideFullimg6.png"
-                            }
+                            href={'/images/gallary/tourgideFullimg6.png'}
                             className="gallary-item-overlay"
-                          ><img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/images/gallary/g-14.png"
-                          }
-                          alt="ImageGallery"
-                        />
+                          >
+                            <img
+                              src={'/images/gallary/g-14.png'}
+                              alt="ImageGallery"
+                            />
                           </a>
                         </div>
                       </SwiperSlide>

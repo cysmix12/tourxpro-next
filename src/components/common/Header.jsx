@@ -611,7 +611,7 @@ function Header() {
                           </Link>
                         </li>
                         <li>
-                          <Link onClick={scrollTop} href={`/gallary`}>
+                          <Link onClick={scrollTop} href={`/gallery`}>
                             Gallery
                           </Link>
                         </li>

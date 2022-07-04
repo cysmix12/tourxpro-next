@@ -287,7 +287,7 @@ function HomePageTwoHeader() {
                           </Link>
                         </li>
                         <li>
-                          <Link onClick={scrollTop} href={`/gallary`}>
+                          <Link onClick={scrollTop} href={`/gallery`}>
                             Gallary
                           </Link>
                         </li>
