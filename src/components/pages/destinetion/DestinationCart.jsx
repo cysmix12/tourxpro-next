@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function DestinationCart(props) {
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
     <>
@@ -13,11 +13,8 @@ function DestinationCart(props) {
         </div>
         <div className="d-card-content">
           <h4 className="destination-title">
-            {" "}
-            <Link
-              onClick={scrollTop}
-              to={`${process.env.PUBLIC_URL}/destination-details`}
-            >
+            {' '}
+            <Link onClick={scrollTop} href={`/destination-details`}>
               {props.palce}
             </Link>
           </h4>
