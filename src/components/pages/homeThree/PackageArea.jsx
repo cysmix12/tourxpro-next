@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 const scrollTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 function PackageArea() {
@@ -101,14 +101,8 @@ function PackageCardBeta(props) {
     <>
       <div className="package-card-beta">
         <div className="package-thumb">
-          <Link
-            to={`${process.env.PUBLIC_URL}/package-details`}
-            onClick={scrollTop}
-          >
-            <img
-              src={`${process.env.PUBLIC_URL} ${props.image}`}
-              alt="package-details img"
-            />
+          <Link href={`/package-details`} onClick={scrollTop}>
+            <img src={` ${props.image}`} alt="package-details img" />
           </Link>
           <p className="card-lavel">
             <i className="bi bi-clock" /> <span>{props.time}</span>
@@ -116,20 +110,16 @@ function PackageCardBeta(props) {
         </div>
         <div className="package-card-body">
           <h3 className="p-card-title">
-            <Link
-              to={`${process.env.PUBLIC_URL}/package-details`}
-              onClick={scrollTop}
-            >
+            <Link href={`/package-details`} onClick={scrollTop}>
               {props.title}
             </Link>
           </h3>
           <div className="p-card-bottom">
             <div className="book-btn">
-              <Link
-                to={`${process.env.PUBLIC_URL}/package-details`}
-                onClick={scrollTop}
-              >
-                Book Now <i className="bx bxs-right-arrow-alt" />
+              <Link href={`/package-details`} onClick={scrollTop}>
+                <>
+                  Book Now <i className="bx bxs-right-arrow-alt" />
+                </>
               </Link>
             </div>
             <div className="p-card-info">

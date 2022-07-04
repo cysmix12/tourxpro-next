@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from 'react';
 
 function PackageHeader() {
   return (
@@ -9,7 +8,7 @@ function PackageHeader() {
           <div className="col">
             <div className="pd-single-info">
               <div className="info-icon">
-                <img src={process.env.PUBLIC_URL + "/images/icons/pd1.svg"} alt="PackageIMG" />
+                <img src={'/images/icons/pd1.svg'} alt="PackageIMG" />
               </div>
               <div className="info">
                 <h6>Duration</h6>
@@ -20,7 +19,7 @@ function PackageHeader() {
           <div className="col">
             <div className="pd-single-info">
               <div className="info-icon">
-                <img src={process.env.PUBLIC_URL + "/images/icons/pd2.svg"} alt="PackageIMG" />
+                <img src={'/images/icons/pd2.svg'} alt="PackageIMG" />
               </div>
               <div className="info">
                 <h6>Tour Type</h6>
@@ -31,7 +30,7 @@ function PackageHeader() {
           <div className="col">
             <div className="pd-single-info">
               <div className="info-icon">
-                <img src={process.env.PUBLIC_URL + "/images/icons/pd3.svg"} alt="PackageIMG" />
+                <img src={'/images/icons/pd3.svg'} alt="PackageIMG" />
               </div>
               <div className="info">
                 <h6>Group Size</h6>
@@ -42,7 +41,7 @@ function PackageHeader() {
           <div className="col">
             <div className="pd-single-info">
               <div className="info-icon">
-                <img src={process.env.PUBLIC_URL + "/images/icons/pd4.svg"} alt="PackageIMG" />
+                <img src={'/images/icons/pd4.svg'} alt="PackageIMG" />
               </div>
               <div className="info">
                 <h6>Tour Guide</h6>
@@ -52,7 +51,7 @@ function PackageHeader() {
           </div>
         </div>
         <div className="pd-thumb">
-          <img src={process.env.PUBLIC_URL + "/images/package/pd-thumb.png"} alt="PackageIMG" />
+          <img src={'/images/package/pd-thumb.png'} alt="PackageIMG" />
         </div>
         <div className="header-bottom">
           <div className="pd-lavel d-flex justify-content-between align-items-center flex-wrap gap-2">
