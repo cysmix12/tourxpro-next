@@ -1,12 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function WidgetPackageOffer() {
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  
   return (
     <>
       <aside className="package-widget-style-2 widget-recent-package-entries mt-30">
@@ -17,19 +16,16 @@ function WidgetPackageOffer() {
           <ul>
             <li className="package-sm">
               <div className="thumb">
-                <Link
-                  onClick={scrollTop}
-                  to={`${process.env.PUBLIC_URL}/package-details`}
-                >
-                  <img src={process.env.PUBLIC_URL + "/images/package/package-sm4.png"} alt="PackageIMG" />
+                <Link onClick={scrollTop} href={`/package-details`}>
+                  <img
+                    src={'/images/package/package-sm4.png'}
+                    alt="PackageIMG"
+                  />
                 </Link>
               </div>
               <div className="info">
                 <h6>
-                  <Link
-                    onClick={scrollTop}
-                    to={`${process.env.PUBLIC_URL}/package-details`}
-                  >
+                  <Link onClick={scrollTop} href={`/package-details`}>
                     San Francisco Golden Gate Bridge, cable cars &amp; fog
                   </Link>
                 </h6>
@@ -43,19 +39,16 @@ function WidgetPackageOffer() {
             </li>
             <li className="package-sm">
               <div className="thumb">
-                <Link
-                  onClick={scrollTop}
-                  to={`${process.env.PUBLIC_URL}/package-details`}
-                >
-                  <img src={process.env.PUBLIC_URL + "/images/package/package-sm3.png"} alt="PackageIMG" />
+                <Link onClick={scrollTop} href={`/package-details`}>
+                  <img
+                    src={'/images/package/package-sm3.png'}
+                    alt="PackageIMG"
+                  />
                 </Link>
               </div>
               <div className="info">
                 <h6>
-                  <Link
-                    onClick={scrollTop}
-                    to={`${process.env.PUBLIC_URL}/package-details`}
-                  >
+                  <Link onClick={scrollTop} href={`/package-details`}>
                     Praesent porttitor tellus sed ande ultrices pulvinar magna
                     mauris.
                   </Link>
@@ -70,19 +63,16 @@ function WidgetPackageOffer() {
             </li>
             <li className="package-sm">
               <div className="thumb">
-                <Link
-                  onClick={scrollTop}
-                  to={`${process.env.PUBLIC_URL}/package-details`}
-                >
-                  <img src={process.env.PUBLIC_URL + "/images/package/package-sm2.png"} alt="PackageIMG" />
+                <Link onClick={scrollTop} href={`/package-details`}>
+                  <img
+                    src={'/images/package/package-sm2.png'}
+                    alt="PackageIMG"
+                  />
                 </Link>
               </div>
               <div className="info">
                 <h6>
-                  <Link
-                    onClick={scrollTop}
-                    to={`${process.env.PUBLIC_URL}/package-details`}
-                  >
+                  <Link onClick={scrollTop} href={`/package-details`}>
                     Vestibulum luctus hendrerit Variusneque, et blandit orci
                     tincidunt.
                   </Link>
@@ -97,19 +87,16 @@ function WidgetPackageOffer() {
             </li>
             <li className="package-sm">
               <div className="thumb">
-                <Link
-                  onClick={scrollTop}
-                  to={`${process.env.PUBLIC_URL}/package-details`}
-                >
-                  <img src={process.env.PUBLIC_URL + "/images/package/package-sm1.png"} alt="PackageIMG" />
+                <Link onClick={scrollTop} href={`/package-details`}>
+                  <img
+                    src={'/images/package/package-sm1.png'}
+                    alt="PackageIMG"
+                  />
                 </Link>
               </div>
               <div className="info">
                 <h6>
-                  <Link
-                    onClick={scrollTop}
-                    to={`${process.env.PUBLIC_URL}/package-details`}
-                  >
+                  <Link onClick={scrollTop} href={`/package-details`}>
                     San Francisco Golden Gate Bridge, cable cars &amp; fog
                   </Link>
                 </h6>

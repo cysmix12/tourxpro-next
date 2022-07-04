@@ -1,17 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function BannerWidget() {
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <>
       <aside className="widget-banner mt-30">
-        <Link
-          onClick={scrollTop}
-          to={`${process.env.PUBLIC_URL}/package-details`}
-        >
-          <img src={process.env.PUBLIC_URL + "/images/banner/sidebar-banner.png"} alt="PackgerIMG" className="img-fluid" />
+        <Link onClick={scrollTop} href={`/package-details`}>
+          <img
+            src={'/images/banner/sidebar-banner.png'}
+            alt="PackgerIMG"
+            className="img-fluid"
+          />
         </Link>
       </aside>
     </>
