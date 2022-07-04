@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
 function Breadcrumb(props) {
   return (
@@ -10,7 +10,7 @@ function Breadcrumb(props) {
             <h2 className="breadcrumb-title">{props.name}</h2>
             <ul className="d-flex justify-content-center breadcrumb-items">
               <li className="breadcrumb-item">
-                <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+                <Link href={`/`}>Home</Link>
               </li>
               <li className="breadcrumb-item active">{props.name}</li>
             </ul>
@@ -18,7 +18,7 @@ function Breadcrumb(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Breadcrumb
+export default Breadcrumb;

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ModalVideo from "react-modal-video";
-import "react-modal-video/css/modal-video.css";
+import React, { useState } from 'react';
+import ModalVideo from 'react-modal-video';
+import 'react-modal-video/css/modal-video.css';
 
 function AboutWrapperArea() {
   const [isOpen, setOpen] = useState(false);
@@ -14,7 +14,7 @@ function AboutWrapperArea() {
               <div className="col-lg-6">
                 <div className="about-tab-image-grid text-center">
                   <div className="about-video d-inline-block">
-                    <img src={process.env.PUBLIC_URL + "/images/about/about-g2.png"} alt="aboutIMG" />
+                    <img src={'/images/about/about-g2.png'} alt="aboutIMG" />
                     <div className="video-overlay">
                       <div className="play-icon video-popup">
                         <i
@@ -27,12 +27,18 @@ function AboutWrapperArea() {
                   <div className="row float-images g-4">
                     <div className="col-lg-6 col-md-6 col-sm-6">
                       <div className="about-image">
-                        <img src={process.env.PUBLIC_URL + "/images/about/about-g1.png"} alt="aboutIMG" />
+                        <img
+                          src={'/images/about/about-g1.png'}
+                          alt="aboutIMG"
+                        />
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-6">
                       <div className="about-image">
-                        <img src={process.env.PUBLIC_URL + "/images/about/about-g3.png"} alt="aboutIMG" />
+                        <img
+                          src={'/images/about/about-g3.png'}
+                          alt="aboutIMG"
+                        />
                       </div>
                     </div>
                   </div>
@@ -209,7 +215,11 @@ function AboutWrapperArea() {
             </div>
             <div className="col-lg-6">
               <div className="about-image-group mt-5 mt-lg-0">
-                <img src={process.env.PUBLIC_URL + "/images/about/about-image-group2.png"} alt="aboutIMG" className="img-fluid" />
+                <img
+                  src={'/images/about/about-image-group2.png'}
+                  alt="aboutIMG"
+                  className="img-fluid"
+                />
               </div>
             </div>
           </div>

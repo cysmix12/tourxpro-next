@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import BlogCardGama from "../blog/BlogGrid/BlogCardGama";
+import React from 'react';
+import Link from 'next/link';
+import BlogCardGama from '../blog/BlogGrid/BlogCardGama';
 
 function BlogArea() {
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -19,7 +19,7 @@ function BlogArea() {
           <div className="col-lg-5">
             <div className="blog-btn text-lg-end">
               <Link
-                to={`${process.env.PUBLIC_URL}/blog`}
+                href={`/blog`}
                 onClick={scrollTop}
                 className="button-fill-round"
               >
@@ -31,7 +31,7 @@ function BlogArea() {
         <div className="row">
           <div className="col-lg-4 col-md-6">
             <BlogCardGama
-              thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-1.png"}
+              thumbImage={'/images/blog/blog-md-1.png'}
               writter="John Smith"
               date="November 17, 2022"
               title="Sollicitudin urna metus iaculis odio eget efficitur leo."
@@ -39,7 +39,7 @@ function BlogArea() {
           </div>
           <div className="col-lg-4 col-md-6">
             <BlogCardGama
-              thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-2.png"}
+              thumbImage={'/images/blog/blog-md-2.png'}
               writter="John Smith"
               date="November 18, 2022"
               title="Aenean auctor porta sodales. Suspendisse fringilla neque."
@@ -47,7 +47,7 @@ function BlogArea() {
           </div>
           <div className="col-lg-4 col-md-6">
             <BlogCardGama
-              thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-3.png"}
+              thumbImage={'/images/blog/blog-md-3.png'}
               writter="John Smith"
               date="November 19, 2022"
               title="Variustempor convallis, mi ligula an suscipit nunc."
