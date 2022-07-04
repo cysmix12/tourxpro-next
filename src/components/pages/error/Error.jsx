@@ -1,6 +1,6 @@
-import React from "react";
-import Breadcrumb from "../../common/Breadcrumb";
-import ErrorWrapper from "./ErrorWrapper";
+import React from 'react';
+import Breadcrumb from '../../common/Breadcrumb';
+import ErrorWrapper from './ErrorWrapper';
 
 function Error() {
   return (
