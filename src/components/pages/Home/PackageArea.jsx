@@ -1,10 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import PackageCard from "../packageGrid/PackageCard";
-
+import React from 'react';
+import Link from 'next/link';
+import PackageCard from '../packageGrid/PackageCard';
 
 function PackageArea() {
-  const scrolltop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrolltop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   return (
     <>
       <div className="package-area package-style-one pt-110 ">
@@ -23,7 +22,7 @@ function PackageArea() {
             <div className="col-lg-4">
               <div className="package-btn text-lg-end">
                 <Link
-                  to={`${process.env.PUBLIC_URL}/package`}
+                  href={`/package`}
                   onClick={scrolltop}
                   className="button-fill-primary"
                 >
@@ -35,7 +34,7 @@ function PackageArea() {
           <div className="row g-4">
             <div className="col-lg-4 col-md-6">
               <PackageCard
-                image={process.env.PUBLIC_URL + "/images/package/p-alpha1.png"}
+                image={'/images/package/p-alpha1.png'}
                 date="2 Day &amp; 1 night"
                 title="Etiam placerat dictum consequat nullaam an Pellentesque habitant."
                 price="$88.00"
@@ -43,7 +42,7 @@ function PackageArea() {
             </div>
             <div className="col-lg-4 col-md-6">
               <PackageCard
-                image={process.env.PUBLIC_URL + "/images/package/p-alpha2.png"}
+                image={'/images/package/p-alpha2.png'}
                 date="4 Day &amp; 3 night"
                 title="Varius condimentum consequat nullaam frin Aenean pretium risus."
                 price="$98.00"
@@ -51,7 +50,7 @@ function PackageArea() {
             </div>
             <div className="col-lg-4 col-md-6">
               <PackageCard
-                image={process.env.PUBLIC_URL + "/images/package/p-alpha3.png"}
+                image={'/images/package/p-alpha3.png'}
                 date="6 Day &amp; 5 night"
                 title="Praesent sed elit mi nullaam. In risus nullaam efficitur non."
                 price="$102.00"
@@ -59,7 +58,7 @@ function PackageArea() {
             </div>
             <div className="col-lg-4 col-md-6">
               <PackageCard
-                image={process.env.PUBLIC_URL + "/images/package/p-alpha4.png"}
+                image={'/images/package/p-alpha4.png'}
                 date="5 Day &amp; 4 night"
                 title="Sed ultricies sapien arcu, nullaam sed cong feugiat sapien."
                 price="$99.50"
@@ -67,7 +66,7 @@ function PackageArea() {
             </div>
             <div className="col-lg-4 col-md-6">
               <PackageCard
-                image={process.env.PUBLIC_URL + "/images/package/p-alpha5.png"}
+                image={'/images/package/p-alpha5.png'}
                 date="6 Day &amp; 5 night"
                 title="Pellentesque habitant morbi malesua tristique senectus."
                 price="$120.50"
@@ -75,7 +74,7 @@ function PackageArea() {
             </div>
             <div className="col-lg-4 col-md-6">
               <PackageCard
-                image={process.env.PUBLIC_URL + "/images/package/p-alpha6.png"}
+                image={'/images/package/p-alpha6.png'}
                 date="3 Day &amp; 4 night"
                 title="San francisco golden gate bridge, golden cable & fog."
                 price="$110.50"

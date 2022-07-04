@@ -1,19 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function PackageCard(props) {
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  
+
   return (
     <>
       <div className="package-card-alpha">
         <div className="package-thumb">
-          <Link
-            onClick={scrollTop}
-            to={`${process.env.PUBLIC_URL}/package-details`}
-          >
+          <Link onClick={scrollTop} href={`/package-details`}>
             <img src={props.image} alt="images" />
           </Link>
           <p className="card-lavel">
@@ -22,20 +19,16 @@ function PackageCard(props) {
         </div>
         <div className="package-card-body">
           <h3 className="p-card-title">
-            <Link
-              onClick={scrollTop}
-              to={`${process.env.PUBLIC_URL}/package-details`}
-            >
+            <Link onClick={scrollTop} href={`/package-details`}>
               {props.title}
             </Link>
           </h3>
           <div className="p-card-bottom">
             <div className="book-btn">
-              <Link
-                onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/package-details`}
-              >
-                Book Now <i className="bx bxs-right-arrow-alt" />
+              <Link onClick={scrollTop} href={`/package-details`}>
+                <>
+                  Book Now <i className="bx bxs-right-arrow-alt" />
+                </>
               </Link>
             </div>
             <div className="p-card-info">

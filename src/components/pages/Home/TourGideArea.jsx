@@ -1,5 +1,5 @@
-import React from "react";
-import GuideCardAlpha from "./GuideCardAlpha";
+import React from 'react';
+import GuideCardAlpha from './GuideCardAlpha';
 
 function TourGideArea() {
   return (
@@ -20,13 +20,22 @@ function TourGideArea() {
           </div>
           <div className="row g-4">
             <div className="col-lg-4 col-md-6">
-              <GuideCardAlpha image={process.env.PUBLIC_URL + "/images/guide/guide-md1.png"} name="Marvin McKinney" />
+              <GuideCardAlpha
+                image={'/images/guide/guide-md1.png'}
+                name="Marvin McKinney"
+              />
             </div>
             <div className="col-lg-4 col-md-6">
-              <GuideCardAlpha image={process.env.PUBLIC_URL + "/images/guide/guide-m2.png"} name="Charlotte Sophia" />
+              <GuideCardAlpha
+                image={'/images/guide/guide-m2.png'}
+                name="Charlotte Sophia"
+              />
             </div>
             <div className="col-lg-4 col-md-6">
-              <GuideCardAlpha image={process.env.PUBLIC_URL + "/images/guide/guide-md3.png"} name="Brooklyn Simmons" />
+              <GuideCardAlpha
+                image={'/images/guide/guide-md3.png'}
+                name="Brooklyn Simmons"
+              />
             </div>
           </div>
         </div>

@@ -1,19 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 // import Swiper core and required modules
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { EffectFade, Navigation, Pagination } from 'swiper';
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, EffectFade]);
 
 function HeroArea() {
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   const HeroSlider = {
     slidesPerView: 1,
     speed: 5000,
     spaceBetween: 0,
     loop: true,
-    effect: "fade",
+    effect: 'fade',
 
     centeredSlides: true,
     roundLengths: true,
@@ -24,16 +24,16 @@ function HeroArea() {
       delay: 700,
     },
     navigation: {
-      nextEl: ".hero-next",
-      prevEl: ".hero-prev",
+      nextEl: '.hero-next',
+      prevEl: '.hero-prev',
     },
     pagination: {
-      el: ".hero-pagination",
-      type: "custom",
+      el: '.hero-pagination',
+      type: 'custom',
       clickable: true,
       renderCustom: function (swiper, current, total) {
         function numberAppend(d) {
-          return d < 10 ? "0" + d.toString() : d.toString();
+          return d < 10 ? '0' + d.toString() : d.toString();
         }
         return numberAppend(current);
       },
@@ -50,10 +50,7 @@ function HeroArea() {
                 <div className="hero-single-slide">
                   <div className="hero-highlighted-bg">
                     <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/images/banner/bg-highlight1.png"
-                      }
+                      src={'/images/banner/bg-highlight1.png'}
                       alt="images"
                     />
                   </div>
@@ -71,14 +68,14 @@ function HeroArea() {
                       </p>
                       <div className="hero-btns">
                         <Link
-                          to={`${process.env.PUBLIC_URL}/package`}
+                          href={`/package`}
                           onClick={scrollTop}
                           className="button-fill-primary"
                         >
                           View Adventure
                         </Link>
                         <Link
-                          to={`${process.env.PUBLIC_URL}/package`}
+                          href={`/package`}
                           onClick={scrollTop}
                           className="button-outlined-primary"
                         >
@@ -93,17 +90,14 @@ function HeroArea() {
                 <div className="hero-single-slide">
                   <div className="hero-highlighted-bg">
                     <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/images/banner/bg-highlight2.png"
-                      }
+                      src={'/images/banner/bg-highlight2.png'}
                       alt="images"
                     />
                   </div>
                   <div className="hero-content-bg">
                     <div className="hero-content position-relative">
                       <h2 className="hero-title">
-                        {" "}
+                        {' '}
                         Move The <span>Earth</span>
                       </h2>
                       <p>
@@ -115,14 +109,14 @@ function HeroArea() {
                       </p>
                       <div className="hero-btns">
                         <Link
-                          to={`${process.env.PUBLIC_URL}/package`}
+                          href={`/package`}
                           onClick={scrollTop}
                           className="button-fill-primary"
                         >
                           View Adventure
                         </Link>
                         <Link
-                          to={`${process.env.PUBLIC_URL}/package`}
+                          href={`/package`}
                           onClick={scrollTop}
                           className="button-outlined-primary"
                         >
@@ -137,10 +131,7 @@ function HeroArea() {
                 <div className="hero-single-slide">
                   <div className="hero-highlighted-bg">
                     <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/images/banner/bg-highlight3.png"
-                      }
+                      src={'/images/banner/bg-highlight3.png'}
                       alt="images"
                     />
                   </div>
@@ -158,14 +149,14 @@ function HeroArea() {
                       </p>
                       <div className="hero-btns">
                         <Link
-                          to={`${process.env.PUBLIC_URL}/package`}
+                          href={`/package`}
                           onClick={scrollTop}
                           className="button-fill-primary"
                         >
                           View Adventure
                         </Link>
                         <Link
-                          to={`${process.env.PUBLIC_URL}/package`}
+                          href={`/package`}
                           onClick={scrollTop}
                           className="button-outlined-primary"
                         >
@@ -186,8 +177,7 @@ function HeroArea() {
             role="button"
             aria-label="Previous slide"
           >
-            {" "}
-            <i className="bi bi-arrow-left" /> Prev{" "}
+            <i className="bi bi-arrow-left" /> Prev
           </div>
           <div
             className="hero-next"

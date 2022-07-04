@@ -1,5 +1,5 @@
-import React from "react";
-import BlogCardAlpha from "./BlogCardAlpha";
+import React from 'react';
+import BlogCardAlpha from './BlogCardAlpha';
 
 function LatestNews() {
   return (
@@ -22,7 +22,7 @@ function LatestNews() {
           <div className="row g-4">
             <div className="col-lg-4 col-md-6">
               <BlogCardAlpha
-                image={process.env.PUBLIC_URL + "/images/blog/blog-md-1.png"}
+                image={'/images/blog/blog-md-1.png'}
                 date="16 May 2022"
                 name="John Smith"
                 comments="5"
@@ -31,7 +31,7 @@ function LatestNews() {
             </div>
             <div className="col-lg-4 col-md-6">
               <BlogCardAlpha
-                image={process.env.PUBLIC_URL + "/images/blog/blog-md-2.png"}
+                image={'/images/blog/blog-md-2.png'}
                 date="26 May 2022"
                 name="John Maria"
                 comments="7"
@@ -40,7 +40,7 @@ function LatestNews() {
             </div>
             <div className="col-lg-4 col-md-6">
               <BlogCardAlpha
-                image={process.env.PUBLIC_URL + "/images/blog/blog-md-3.png"}
+                image={'/images/blog/blog-md-3.png'}
                 date="17 May 2022"
                 name="Willium Crinchi"
                 comments="2"

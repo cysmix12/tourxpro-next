@@ -1,8 +1,8 @@
-import React, { useState, useReducer, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
-import Select from "react-select";
-import "react-datepicker/dist/react-datepicker.css";
-import DatePicker from "react-datepicker";
+import React, { useState, useReducer, useEffect } from 'react';
+import Link from 'next/link';
+import Select from 'react-select';
+import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from 'react-datepicker';
 
 function Header() {
   const [isSearchActive, setSearchActive] = useState(false);
@@ -13,40 +13,39 @@ function Header() {
 
   /*useing reducer to manage the active or inactive menu*/
 
-
-
   useEffect(() => {
     // Add scroll event when the component is loaded
     window.addEventListener('scroll', isSticky);
     return () => {
-        window.removeEventListener('scroll', isSticky);
+      window.removeEventListener('scroll', isSticky);
     };
   });
   /* Method that will fix header after a specific scrollable */
   const isSticky = (e) => {
     const header = document.querySelector('header');
     const scrollTop = window.scrollY;
-    scrollTop >= 200 ? header.classList.add('sticky') : header.classList.remove('sticky');
-};
+    scrollTop >= 200
+      ? header.classList.add('sticky')
+      : header.classList.remove('sticky');
+  };
 
-  
-  const initialState = { activeMenu: "" };
+  const initialState = { activeMenu: '' };
   const [state, dispatch] = useReducer(reducer, initialState);
 
   function reducer(state, action) {
     switch (action.type) {
-      case "homeOne":
-        return { activeMenu: "homeOne" };
-      case "page":
-        return { activeMenu: "page" };
-      case "package":
-        return { activeMenu: "package" };
-      case "blog":
-        return { activeMenu: "blog" };
-      case "destination":
-        return { activeMenu: "destination" };
+      case 'homeOne':
+        return { activeMenu: 'homeOne' };
+      case 'page':
+        return { activeMenu: 'page' };
+      case 'package':
+        return { activeMenu: 'package' };
+      case 'blog':
+        return { activeMenu: 'blog' };
+      case 'destination':
+        return { activeMenu: 'destination' };
       default:
-        return { activeMenu: " " };
+        return { activeMenu: ' ' };
     }
   }
 
@@ -74,36 +73,36 @@ function Header() {
   };
 
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const optionsForDestination = [
-    { value: "1", label: "India" },
-    { value: "2", label: "Sri Lanka" },
-    { value: "3", label: "Solt Lake" },
-    { value: "4", label: " Kolkata" },
-    { value: "6", label: " Mohania" },
-    { value: "7", label: " Mumbai" },
-    { value: "8", label: " New Delhi" },
+    { value: '1', label: 'India' },
+    { value: '2', label: 'Sri Lanka' },
+    { value: '3', label: 'Solt Lake' },
+    { value: '4', label: ' Kolkata' },
+    { value: '6', label: ' Mohania' },
+    { value: '7', label: ' Mumbai' },
+    { value: '8', label: ' New Delhi' },
   ];
   const optionsForTravel = [
-    { value: "1", label: "Adventure Tour" },
-    { value: "2", label: "Group Tour" },
-    { value: "3", label: "Couple Tour" },
-    { value: "4", label: "Sea Beach" },
-    { value: "5", label: "Mountain Tour" },
+    { value: '1', label: 'Adventure Tour' },
+    { value: '2', label: 'Group Tour' },
+    { value: '3', label: 'Couple Tour' },
+    { value: '4', label: 'Sea Beach' },
+    { value: '5', label: 'Mountain Tour' },
   ];
   const optionsForPerson = [
-    { value: "1", label: "01" },
-    { value: "2", label: "02" },
-    { value: "3", label: "03" },
-    { value: "4", label: "04" },
-    { value: "5", label: "05" },
+    { value: '1', label: '01' },
+    { value: '2', label: '02' },
+    { value: '3', label: '03' },
+    { value: '4', label: '04' },
+    { value: '5', label: '05' },
   ];
   return (
     <>
       <div
-        className={`${"main-searchbar-wrapper"} ${
-          isSearchActive === 1 ? "search-active" : ""
+        className={`${'main-searchbar-wrapper'} ${
+          isSearchActive === 1 ? 'search-active' : ''
         }`}
       >
         <div className="container">
@@ -191,10 +190,7 @@ function Header() {
                 </div>
                 <div className="col-lg-2">
                   <div className="main-form-submit">
-                    <Link
-                      to={`${process.env.PUBLIC_URL}/package`}
-                      onClick={scrollTop}
-                    >
+                    <Link href={`/package`} onClick={scrollTop}>
                       <button type="submit">Find Now</button>
                     </Link>
                   </div>
@@ -205,8 +201,8 @@ function Header() {
         </div>
       </div>
       <div
-        className={`${"category-sidebar-wrapper"} ${
-          isCatagoryActive === 1 ? "category-active" : ""
+        className={`${'category-sidebar-wrapper'} ${
+          isCatagoryActive === 1 ? 'category-active' : ''
         }`}
       >
         <div className="category-sidebar">
@@ -221,105 +217,98 @@ function Header() {
               <Link
                 className="category-box"
                 onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate1.svg"}
-                    alt="catagoryIMG"
-                  />
-                </div>
-                <h5>Adventure</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate1.svg'} alt="catagoryIMG" />
+                  </div>
+                  <h5>Adventure</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
                 onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate2.svg"}
-                    alt="catagoryIMG"
-                  />
-                </div>
-                <h5>Group Tour</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate2.svg'} alt="catagoryIMG" />
+                  </div>
+                  <h5>Group Tour</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
                 onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate3.svg"}
-                    alt="catagoryIMG"
-                  />
-                </div>
-                <h5>Couple Tour</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate3.svg'} alt="catagoryIMG" />
+                  </div>
+                  <h5>Couple Tour</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
                 onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate4.svg"}
-                    alt="catagoryIMG"
-                  />
-                </div>
-                <h5>Single Tour</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate4.svg'} alt="catagoryIMG" />
+                  </div>
+                  <h5>Single Tour</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
                 onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate5.svg"}
-                    alt="catagoryIMG"
-                  />
-                </div>
-                <h5>Honeymoon</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate5.svg'} alt="catagoryIMG" />
+                  </div>
+                  <h5>Honeymoon</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
                 onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate6.svg"}
-                    alt="catagoryIMG"
-                  />
-                </div>
-                <h5>Sea Beach</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate6.svg'} alt="catagoryIMG" />
+                  </div>
+                  <h5>Sea Beach</h5>
+                </>
               </Link>
             </div>
             <div className="col">
               <Link
                 className="category-box"
                 onClick={scrollTop}
-                to={`${process.env.PUBLIC_URL}/package`}
+                href={`/package`}
               >
-                <div className="cate-icon mx-auto">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/icons/cate7.svg"}
-                    alt="catagoryIMG"
-                  />
-                </div>
-                <h5>Mountain Tour</h5>
+                <>
+                  <div className="cate-icon mx-auto">
+                    <img src={'/images/icons/cate7.svg'} alt="catagoryIMG" />
+                  </div>
+                  <h5>Mountain Tour</h5>
+                </>
               </Link>
             </div>
           </div>
@@ -345,10 +334,7 @@ function Header() {
             </div>
             <div className="col-xl-5 col-lg-6 col-md-6 text-xl-center text-md-start text-center">
               <div className="topbar-ad">
-                <Link
-                  onClick={scrollTop}
-                  to={`${process.env.PUBLIC_URL}/package`}
-                >
+                <Link onClick={scrollTop} href={`/package`}>
                   Black Friday Big Offer
                 </Link>
               </div>
@@ -412,11 +398,8 @@ function Header() {
             <div className="row">
               <div className="col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-items-center d-xl-flex d-lg-block">
                 <div className="logo d-flex justify-content-between align-items-center">
-                  <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/`}>
-                    <img
-                      src={process.env.PUBLIC_URL + "/images/logo.png"}
-                      alt="logo"
-                    />
+                  <Link onClick={scrollTop} href={`/`}>
+                    <img src={'/images/logo.png'} alt="logo" />
                   </Link>
                   <div className="d-flex align-items-center gap-4">
                     <div className="nav-right d-xl-none">
@@ -440,16 +423,18 @@ function Header() {
                       onClick={handleOpenBtn}
                     >
                       <Link
-                        to={"#"}
+                        href={'#'}
                         className={
                           isOpenActive
-                            ? "hamburger d-block d-xl-none h-active"
-                            : "hamburger d-block d-xl-none"
+                            ? 'hamburger d-block d-xl-none h-active'
+                            : 'hamburger d-block d-xl-none'
                         }
                       >
-                        <span className="h-top" />
-                        <span className="h-middle" />
-                        <span className="h-bottom" />
+                        <>
+                          <span className="h-top" />
+                          <span className="h-middle" />
+                          <span className="h-bottom" />
+                        </>
                       </Link>
                     </div>
                   </div>
@@ -459,228 +444,205 @@ function Header() {
                 <nav
                   className={
                     isOpenActive
-                      ? "main-nav float-end slidenav"
-                      : "main-nav float-end"
+                      ? 'main-nav float-end slidenav'
+                      : 'main-nav float-end'
                   }
                 >
                   <div className="logo d-xl-none text-center">
-                    <Link to={"#"}>
-                      <img
-                        src={process.env.PUBLIC_URL + "/images/logo.png"}
-                        alt="catagoryIMG"
-                      />
+                    <Link href={'#'}>
+                      <img src={'/images/logo.png'} alt="catagoryIMG" />
                     </Link>
                   </div>
                   <ul>
-                    <li className="has-child-menu"  onClick={() => dispatch({type: 'homeOne'})}>
-                      <Link to={"#"} >Home</Link>
+                    <li
+                      className="has-child-menu"
+                      onClick={() => dispatch({ type: 'homeOne' })}
+                    >
+                      <Link href={'#'}>Home</Link>
                       <i className="fl flaticon-plus">+</i>
-                      <ul className={
-                        state.activeMenu ==='homeOne'
-                          ? "sub-menu d-block"
-                          : "sub-menu d-none"
-                      }>
+                      <ul
+                        className={
+                          state.activeMenu === 'homeOne'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
+                        }
+                      >
                         <li>
-                          <Link
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/`}
-                          >
+                          <Link onClick={scrollTop} href={`/`}>
                             Home Style 1
                           </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/index2`}
-                          >
+                          <Link onClick={scrollTop} href={`/index2`}>
                             Home Style 2
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/index3`}
-                          >
+                          <Link onClick={scrollTop} href={`/index3`}>
                             Home Style 3
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/index4`}
-                          >
+                          <Link onClick={scrollTop} href={`/index4`}>
                             Home Style 4
-                          </NavLink>
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <NavLink
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/about`}
-                      >
+                      <Link onClick={scrollTop} href={`/about`}>
                         About Us
-                      </NavLink>
+                      </Link>
                     </li>
-                    <li className="has-child-menu" onClick={()=> dispatch({type: 'destination'})}>
-                      <Link to={"#"}>Destination</Link>
-                      <i className="fl flaticon-plus">+</i>
-                      <ul className={state.activeMenu === "destination" ? "sub-menu d-block" : "sub-menu d-none"}>
-                        <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/destination`}
-                          >
-                            Destination
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/destination-details`}
-                          >
-                            Destination Details
-                          </NavLink>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="has-child-menu" onClick={()=> dispatch({type: 'package'})}>
-                      <Link to={"#"}>Package</Link>
+                    <li
+                      className="has-child-menu"
+                      onClick={() => dispatch({ type: 'destination' })}
+                    >
+                      <Link href={'#'}>Destination</Link>
                       <i className="fl flaticon-plus">+</i>
                       <ul
                         className={
-                          state.activeMenu === "package"
-                            ? "sub-menu d-block"
-                            : "sub-menu d-none"
+                          state.activeMenu === 'destination'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
                         }
                       >
                         <li>
-                          <NavLink
-                            to={`${process.env.PUBLIC_URL}/package`}
+                          <Link onClick={scrollTop} href={`/destination`}>
+                            Destination
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
                             onClick={scrollTop}
+                            href={`/destination-details`}
                           >
+                            Destination Details
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      className="has-child-menu"
+                      onClick={() => dispatch({ type: 'package' })}
+                    >
+                      <Link href={'#'}>Package</Link>
+                      <i className="fl flaticon-plus">+</i>
+                      <ul
+                        className={
+                          state.activeMenu === 'package'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
+                        }
+                      >
+                        <li>
+                          <Link href={`/package`} onClick={scrollTop}>
                             Package Grid
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-sidebar`}
-                          >
+                          <Link onClick={scrollTop} href={`/package-sidebar`}>
                             Package Sidebar
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-standard`}
-                          >
+                          <Link onClick={scrollTop} href={`/package-standard`}>
                             Package Standard
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-details`}
-                          >
+                          <Link onClick={scrollTop} href={`/package-details`}>
                             Package Details
-                          </NavLink>
+                          </Link>
                         </li>
                       </ul>
                     </li>
-                    <li className="has-child-menu" onClick={()=> dispatch ({type: 'blog'})}>
-                      <Link to={"#"}>Blogs</Link>
+                    <li
+                      className="has-child-menu"
+                      onClick={() => dispatch({ type: 'blog' })}
+                    >
+                      <Link href={'#'}>Blogs</Link>
                       <i className="fl flaticon-plus">+</i>
-                      <ul className={state.activeMenu ==="blog" ?"sub-menu d-block":"sub-menu d-none"}>
+                      <ul
+                        className={
+                          state.activeMenu === 'blog'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
+                        }
+                      >
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/blog`}
-                          >
+                          <Link onClick={scrollTop} href={`/blog`}>
                             Blog Grid
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/blog-sidebar`}
-                          >
+                          <Link onClick={scrollTop} href={`/blog-sidebar`}>
                             Blog Sidebar
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/blog-standard`}
-                          >
+                          <Link onClick={scrollTop} href={`/blog-standard`}>
                             Blog Standard
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/blog-details`}
-                          >
+                          <Link onClick={scrollTop} href={`/blog-details`}>
                             Blog Details
-                          </NavLink>
+                          </Link>
                         </li>
                       </ul>
                     </li>
-                    <li className="has-child-menu" onClick={()=> dispatch ({type: 'page'})}>
-                      <Link to={"#"}>Pages</Link>
+                    <li
+                      className="has-child-menu"
+                      onClick={() => dispatch({ type: 'page' })}
+                    >
+                      <Link href={'#'}>Pages</Link>
                       <i className="fl flaticon-plus">+</i>
-                      <ul className={state.activeMenu ==="page"? "sub-menu d-block" : "sub-menu d-none"}>
+                      <ul
+                        className={
+                          state.activeMenu === 'page'
+                            ? 'sub-menu d-block'
+                            : 'sub-menu d-none'
+                        }
+                      >
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/guide`}
-                          >
+                          <Link onClick={scrollTop} href={`/guide`}>
                             Guide
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/gallary`}
-                          >
+                          <Link onClick={scrollTop} href={`/gallary`}>
                             Gallery
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/faq`}
-                          >
+                          <Link onClick={scrollTop} href={`/faq`}>
                             FAQ
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink
-                            onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/error`}
-                          >
+                          <Link onClick={scrollTop} href={`/error`}>
                             404
-                          </NavLink>
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <NavLink
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/contact`}
-                      >
+                      <Link onClick={scrollTop} href={`/contact`}>
                         Contact Us
-                      </NavLink>
+                      </Link>
                     </li>
                   </ul>
                   <div className="inner-contact-options d-xl-none">
                     <div className="contact-box-inner">
                       <i className="bi bi-telephone-fill" />
-                      <Link to="tel:+17632275032">+1 763-227-5032</Link>
+                      <Link href="tel:+17632275032">+1 763-227-5032</Link>
                     </div>
                     <div className="contact-box-inner">
                       <i className="bi bi-envelope-fill" />
-                      <Link to="mailto:info@example.com">info@example.com</Link>
+                      <Link href="mailto:info@example.com">
+                        info@example.com
+                      </Link>
                     </div>
                   </div>
                 </nav>

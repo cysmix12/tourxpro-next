@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import Swiper core and required modules
-import SwiperCore, { Autoplay, Navigation } from "swiper";
-import HomeOneDestinationCart from "./HomeOneDestinationCart";
+import SwiperCore, { Autoplay, Navigation } from 'swiper';
+import HomeOneDestinationCart from './HomeOneDestinationCart';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);
@@ -21,8 +21,8 @@ function DestinationArea() {
       delay: 1500,
     },
     navigation: {
-      nextEl: ".testi-next",
-      prevEl: ".testi-prev",
+      nextEl: '.testi-next',
+      prevEl: '.testi-prev',
     },
     breakpoints: {
       480: {
@@ -85,9 +85,7 @@ function DestinationArea() {
             <div className="swiper-wrapper">
               <SwiperSlide className="swiper-slide">
                 <HomeOneDestinationCart
-                  image={
-                    process.env.PUBLIC_URL + "/images/destination/dest-3.png"
-                  }
+                  image={'/images/destination/dest-3.png'}
                   title="Marakana"
                   place="15"
                   hotel="16"
@@ -95,9 +93,7 @@ function DestinationArea() {
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <HomeOneDestinationCart
-                  image={
-                    process.env.PUBLIC_URL + "/images/destination/dest-2.png"
-                  }
+                  image={'/images/destination/dest-2.png'}
                   title="Augsburg"
                   place="10"
                   hotel="18"
@@ -105,9 +101,7 @@ function DestinationArea() {
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <HomeOneDestinationCart
-                  image={
-                    process.env.PUBLIC_URL + "/images/destination/dest-4.png"
-                  }
+                  image={'/images/destination/dest-4.png'}
                   title="Dusseldorf"
                   place="15"
                   hotel="25"
@@ -115,9 +109,7 @@ function DestinationArea() {
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <HomeOneDestinationCart
-                  image={
-                    process.env.PUBLIC_URL + "/images/destination/dest-2.png"
-                  }
+                  image={'/images/destination/dest-2.png'}
                   title="Nuremberg"
                   place="20"
                   hotel="28"
@@ -125,9 +117,7 @@ function DestinationArea() {
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <HomeOneDestinationCart
-                  image={
-                    process.env.PUBLIC_URL + "/images/destination/dest-3.png"
-                  }
+                  image={'/images/destination/dest-3.png'}
                   title="Wiesbaden"
                   place="6"
                   hotel="12"

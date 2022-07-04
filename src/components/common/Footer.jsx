@@ -1,14 +1,12 @@
-
-import { Link } from "react-router-dom";
-import { SRLWrapper } from "simple-react-lightbox";
+import Link from 'next/link';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 function Footer(props) {
-
   // smooth scrol
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -17,7 +15,7 @@ function Footer(props) {
       <div className={props.className}>
         <div className="footer-main-wrapper">
           <div className="footer-vactor">
-            <img src={process.env.PUBLIC_URL + "/images/banner/footer-bg.png"} alt="FooterIMG" />
+            <img src={'/images/banner/footer-bg.png'} alt="FooterIMG" />
           </div>
           <div className="container">
             <div className="row justify-content-center g-4">
@@ -72,7 +70,6 @@ function Footer(props) {
                           rel="noopener noreferrer"
                           href="https://www.pinterest.com/"
                           target="_blank"
-                          to={"#"}
                         >
                           <i className="bx bxl-pinterest-alt" />
                         </a>
@@ -86,50 +83,32 @@ function Footer(props) {
                   <h3 className="footer-widget-title">Quick Link</h3>
                   <ul className="footer-links">
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/about`}
-                      >
+                      <Link onClick={scrollTop} href={`/about`}>
                         About Us
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/package`}
-                      >
+                      <Link onClick={scrollTop} href={`/package`}>
                         Tour Package
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/destination`}
-                      >
+                      <Link onClick={scrollTop} href={`/destination`}>
                         Destination
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/guide`}
-                      >
+                      <Link onClick={scrollTop} href={`/guide`}>
                         Tour Guide
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/package-details`}
-                      >
+                      <Link onClick={scrollTop} href={`/package-details`}>
                         Booking Process
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/blog`}
-                      >
+                      <Link onClick={scrollTop} href={`/blog`}>
                         Blog
                       </Link>
                     </li>
@@ -141,42 +120,27 @@ function Footer(props) {
                   <h4 className="footer-widget-title">Tour Type</h4>
                   <ul className="footer-links">
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/package`}
-                      >
+                      <Link onClick={scrollTop} href={`/package`}>
                         Wild &amp; Adventure Tours
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/package`}
-                      >
+                      <Link onClick={scrollTop} href={`/package`}>
                         Group Tour
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/package`}
-                      >
+                      <Link onClick={scrollTop} href={`/package`}>
                         Seasonal Tours
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/package`}
-                      >
+                      <Link onClick={scrollTop} href={`/package`}>
                         Relaxation Tours
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={scrollTop}
-                        to={`${process.env.PUBLIC_URL}/package`}
-                      >
+                      <Link onClick={scrollTop} href={`/package`}>
                         Family Friendly Tours
                       </Link>
                     </li>
@@ -193,56 +157,74 @@ function Footer(props) {
                       <div className="footer-gallary-grid">
                         <div className="footer-gallary-item">
                           <a
-                            href={process.env.PUBLIC_URL + "/images/gallary/fullsecrron01.png"}
+                            href={'/images/gallary/fullsecrron01.png'}
                             data-fancybox="footer"
                             data-caption="Caption Here"
                           >
-                            <img src={process.env.PUBLIC_URL + "/images/gallary/fg-1.png"} alt="footerIMG" />
+                            <img
+                              src={'/images/gallary/fg-1.png'}
+                              alt="footerIMG"
+                            />
                           </a>
                         </div>
                         <div className="footer-gallary-item">
                           <a
-                            href={process.env.PUBLIC_URL + "/images/gallary/fullsecrron02.png"}
+                            href={'/images/gallary/fullsecrron02.png'}
                             data-fancybox="footer"
                             data-caption="Caption Here"
                           >
-                            <img src={process.env.PUBLIC_URL + "/images/gallary/fg-2.png"} alt="footerIMG" />
+                            <img
+                              src={'/images/gallary/fg-2.png'}
+                              alt="footerIMG"
+                            />
                           </a>
                         </div>
                         <div className="footer-gallary-item">
                           <a
-                            href={process.env.PUBLIC_URL + "/images/gallary/fullsecrron06.png"}
+                            href={'/images/gallary/fullsecrron06.png'}
                             data-fancybox="footer"
                             data-caption="Caption Here"
                           >
-                            <img src={process.env.PUBLIC_URL + "/images/gallary/fg-3.png"} alt="footerIMG" />
+                            <img
+                              src={'/images/gallary/fg-3.png'}
+                              alt="footerIMG"
+                            />
                           </a>
                         </div>
                         <div className="footer-gallary-item">
                           <a
-                            href={process.env.PUBLIC_URL + "/images/gallary/fullsecrron05.png"}
+                            href={'/images/gallary/fullsecrron05.png'}
                             data-fancybox="footer"
                             data-caption="Caption Here"
                           >
-                            <img src={process.env.PUBLIC_URL + "/images/gallary/fg-4.png"} alt="footerIMG" />
+                            <img
+                              src={'/images/gallary/fg-4.png'}
+                              alt="footerIMG"
+                            />
                           </a>
                         </div>
                         <div className="footer-gallary-item">
                           <a
-                            href={process.env.PUBLIC_URL + "/images/gallary/fullsecrron03.png"}
+                            href={'/images/gallary/fullsecrron03.png'}
                             data-fancybox="footer"
                             data-caption="Caption Here"
                           >
-                            <img src={process.env.PUBLIC_URL + "/images/gallary/fg-5.png"} alt="footerIMG" />
+                            <img
+                              src={'/images/gallary/fg-5.png'}
+                              alt="footerIMG"
+                            />
                           </a>
                         </div>
                         <div className="footer-gallary-item">
                           <a
-                            href={process.env.PUBLIC_URL + "/images/gallary/fullsecrron06.png"}
+                            href={'/images/gallary/fullsecrron06.png'}
                             data-fancybox="footer"
                             data-caption="Caption Here"
                           >
-                            <img src={process.env.PUBLIC_URL + "/images/gallary/fg-6.png"} alt="footerIMG" />
+                            <img
+                              src={'/images/gallary/fg-6.png'}
+                              alt="footerIMG"
+                            />
                           </a>
                         </div>
                       </div>
@@ -255,18 +237,20 @@ function Footer(props) {
               <h5>Contact Us:</h5>
               <ul className="footer-contact-list">
                 <li>
-                  <i className="bi bi-telephone-x" />{" "}
+                  <i className="bi bi-telephone-x" />{' '}
                   <a rel="noopener noreferrer" href="tel:+1 763-227-5032">
                     +1 763-227-5032
                   </a>
                 </li>
                 <li>
-                  <i className="bi bi-envelope-open" />{" "}
+                  <i className="bi bi-envelope-open" />{' '}
                   <a href="mailto:info@example.com">info@example.com</a>
                 </li>
                 <li>
-                  <i className="bi bi-geo-alt" />{" "}
-                  <Link to={"#"}>2752 Willison Street Eagan, United State</Link>
+                  <i className="bi bi-geo-alt" />{' '}
+                  <Link href={'#'}>
+                    2752 Willison Street Eagan, United State
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -278,13 +262,13 @@ function Footer(props) {
               <div className="col-lg-4 col-md-6 order-lg-1 order-3 ">
                 <div className="copyright-link text-lg-start text-center">
                   <p>
-                    Copyright 2022 TourXPro | Design By{" "}
+                    Copyright 2022 TourXPro | Design By{' '}
                     <a
                       rel="noopener noreferrer"
                       href="https://www.egenslab.com/"
                       target="_blank"
                     >
-                      {" "}
+                      {' '}
                       Egens Lab
                     </a>
                   </p>
@@ -292,8 +276,8 @@ function Footer(props) {
               </div>
               <div className="col-lg-4  order-lg-2 order-1">
                 <div className="footer-logo text-center">
-                  <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/`}>
-                    <img src={process.env.PUBLIC_URL + "/images/logo-w.png"} alt="FooterIMG" />
+                  <Link onClick={scrollTop} href={`/`}>
+                    <img src={'/images/logo-w.png'} alt="FooterIMG" />
                   </Link>
                 </div>
               </div>
@@ -301,10 +285,10 @@ function Footer(props) {
                 <div className="policy-links">
                   <ul className="policy-list justify-content-lg-end justify-content-center">
                     <li>
-                      <Link to={"#"}>Terms &amp; Condition</Link>
+                      <Link href={'#'}>Terms &amp; Condition</Link>
                     </li>
                     <li>
-                      <Link to={"#"}>Privacy Policy</Link>
+                      <Link href={'#'}>Privacy Policy</Link>
                     </li>
                   </ul>
                 </div>
