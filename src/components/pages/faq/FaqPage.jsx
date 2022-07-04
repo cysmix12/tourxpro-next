@@ -1,6 +1,6 @@
-import React from "react";
-import Breadcrumb from "../../common/Breadcrumb";
-import FaqWrapper from "./FaqWrapper";
+import React from 'react';
+import Breadcrumb from '../../common/Breadcrumb';
+import FaqWrapper from './FaqWrapper';
 
 function FaqPage() {
   return (

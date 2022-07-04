@@ -1,7 +1,7 @@
-import React from "react";
-import Faq from "./Faq";
-import FaqQuestionForm from "./FaqQuestionForm";
-import FaqTopic from "./FaqTopic";
+import React from 'react';
+import Faq from './Faq';
+import FaqQuestionForm from './FaqQuestionForm';
+import FaqTopic from './FaqTopic';
 
 function FaqWrapper() {
   return (
