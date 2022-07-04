@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { SRLWrapper } from "simple-react-lightbox";
-import ModalVideo from "react-modal-video";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { SRLWrapper } from 'simple-react-lightbox';
+import ModalVideo from 'react-modal-video';
 
 function PackageDetailsTab() {
   const [isOpen, setOpen] = useState(false);
@@ -100,29 +100,16 @@ function PackageDetailsTab() {
             <div className="p-info-featured-img row position-relative g-3  row-cols-1 row-cols-sm-2">
               <div className="col">
                 <div className="featured-img">
-                  <img
-                    src={
-                      process.env.PUBLIC_URL + "/images/package/feat-img1.png"
-                    }
-                    alt="PackageIMG"
-                  />
+                  <img src={'/images/package/feat-img1.png'} alt="PackageIMG" />
                 </div>
               </div>
               <div className="col">
                 <div className="featured-img">
-                  <img
-                    src={
-                      process.env.PUBLIC_URL + "/images/package/feat-img2.png"
-                    }
-                    alt="PackageIMG"
-                  />
+                  <img src={'/images/package/feat-img2.png'} alt="PackageIMG" />
                 </div>
               </div>
               <div className="featured-video position-absolute ">
-                <img
-                  src={process.env.PUBLIC_URL + "/images/package/feat-img3.png"}
-                  alt="PackageIMG"
-                />
+                <img src={'/images/package/feat-img3.png'} alt="PackageIMG" />
                 <div className="video-overlay">
                   <div className="play-icon video-popup">
                     {/* <i className="bi bi-play-fill" /> */}
@@ -196,10 +183,7 @@ function PackageDetailsTab() {
                 <tr>
                   <td colSpan={2} className="tour-transport-col">
                     <div className="tour-transport  d-flex align-items-center justify-content-center">
-                      <img
-                        src={process.env.PUBLIC_URL + "/images/icons/bus.svg"}
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/icons/bus.svg'} alt="PackageIMG" />
                       <span>Travel With Bus</span>
                     </div>
                   </td>
@@ -256,10 +240,7 @@ function PackageDetailsTab() {
                 <li className="single-comment d-flex flex-sm-row flex-column ">
                   <div className="commmentor">
                     <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/images/reviewer/commertor2.png"
-                      }
+                      src={'/images/reviewer/commertor2.png'}
                       alt="PackageIMG"
                     />
                   </div>
@@ -293,8 +274,10 @@ function PackageDetailsTab() {
                       Suspendisse
                     </p>
                     <div className="reply-btn">
-                      <Link to={"#"}>
-                        <i className="bi bi-reply-all-fill" /> Reply
+                      <Link href={'#'}>
+                        <>
+                          <i className="bi bi-reply-all-fill" /> Reply
+                        </>
                       </Link>
                     </div>
                   </div>
@@ -302,10 +285,7 @@ function PackageDetailsTab() {
                 <li className="single-comment d-flex flex-sm-row flex-column">
                   <div className="commmentor">
                     <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/images/reviewer/commertor3.png"
-                      }
+                      src={'/images/reviewer/commertor3.png'}
                       alt="PackageIMG"
                     />
                   </div>
@@ -339,8 +319,10 @@ function PackageDetailsTab() {
                       Suspendisse
                     </p>
                     <div className="reply-btn">
-                      <Link to={"#"}>
-                        <i className="bi bi-reply-all-fill" /> Reply
+                      <Link href={'#'}>
+                        <>
+                          <i className="bi bi-reply-all-fill" /> Reply
+                        </>
                       </Link>
                     </div>
                   </div>
@@ -348,10 +330,7 @@ function PackageDetailsTab() {
                 <li className="single-comment d-flex flex-sm-row flex-column">
                   <div className="commmentor">
                     <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/images/reviewer/commertor1.png"
-                      }
+                      src={'/images/reviewer/commertor1.png'}
                       alt="PackageIMG"
                     />
                   </div>
@@ -385,15 +364,17 @@ function PackageDetailsTab() {
                       Suspendisse
                     </p>
                     <div className="reply-btn">
-                      <Link to={"#"}>
-                        <i className="bi bi-reply-all-fill" /> Reply
+                      <Link href={'#'}>
+                        <>
+                          <i className="bi bi-reply-all-fill" /> Reply
+                        </>
                       </Link>
                     </div>
                   </div>
                 </li>
               </ul>
               <div className="comment-btn text-center">
-                <Link to={"#"}>View All Comment</Link>
+                <Link href={'#'}>View All Comment</Link>
               </div>
             </div>
             <form
@@ -427,7 +408,7 @@ function PackageDetailsTab() {
                     cols={20}
                     rows={7}
                     placeholder="Write Message"
-                    defaultValue={""}
+                    defaultValue={''}
                   />
                 </div>
                 <ul className="form-rating d-flex">
@@ -739,171 +720,99 @@ function PackageDetailsTab() {
                 <div className="col-6">
                   <div className="package-gallary-item">
                     <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        "/images/gallary/packageGallaryFullImg1.png"
-                      }
+                      href={'/images/gallary/packageGallaryFullImg1.png'}
                       data-fancybox="gallery"
                       data-caption="Caption Here"
                     >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL + "/images/gallary/pgl-1.png"
-                        }
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/gallary/pgl-1.png'} alt="PackageIMG" />
                     </a>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="package-gallary-item">
                     <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        "/images/gallary/packageGallaryFullImg2.png"
-                      }
+                      href={'/images/gallary/packageGallaryFullImg2.png'}
                       data-fancybox="gallery"
                       data-caption="Caption Here"
                     >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL + "/images/gallary/pgl-2.png"
-                        }
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/gallary/pgl-2.png'} alt="PackageIMG" />
                     </a>
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="package-gallary-item">
                     <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        "/images/gallary/packageGallaryFullImg3.png"
-                      }
+                      href={'/images/gallary/packageGallaryFullImg3.png'}
                       data-fancybox="gallery"
                       data-caption="Caption Here"
                     >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL + "/images/gallary/pgx-1.png"
-                        }
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/gallary/pgx-1.png'} alt="PackageIMG" />
                     </a>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="package-gallary-item">
                     <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        "/images/gallary/packageGallaryFullImg4.png"
-                      }
+                      href={'/images/gallary/packageGallaryFullImg4.png'}
                       data-fancybox="gallery"
                       data-caption="Caption Here"
                     >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL + "/images/gallary/pgl-3.png"
-                        }
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/gallary/pgl-3.png'} alt="PackageIMG" />
                     </a>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="package-gallary-item">
                     <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        "/images/gallary/packageGallaryFullImg5.png"
-                      }
+                      href={'/images/gallary/packageGallaryFullImg5.png'}
                       data-fancybox="gallery"
                       data-caption="Caption Here"
                     >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL + "/images/gallary/pgl-4.png"
-                        }
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/gallary/pgl-4.png'} alt="PackageIMG" />
                     </a>
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="package-gallary-item">
                     <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        "/images/gallary/packageGallaryFullImg6.png"
-                      }
+                      href={'/images/gallary/packageGallaryFullImg6.png'}
                       data-fancybox="gallery"
                       data-caption="Caption Here"
                     >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL + "/images/gallary/pgx-2.png"
-                        }
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/gallary/pgx-2.png'} alt="PackageIMG" />
                     </a>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="package-gallary-item">
                     <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        "/images/gallary/packageGallaryFullImg7.png"
-                      }
+                      href={'/images/gallary/packageGallaryFullImg7.png'}
                       data-fancybox="gallery"
                       data-caption="Caption Here"
                     >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL + "/images/gallary/pgl-5.png"
-                        }
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/gallary/pgl-5.png'} alt="PackageIMG" />
                     </a>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="package-gallary-item">
                     <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        "/images/gallary/packageGallaryFullImg8.png"
-                      }
+                      href={'/images/gallary/packageGallaryFullImg8.png'}
                       data-fancybox="gallery"
                       data-caption="Caption Here"
                     >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL + "/images/gallary/pgl-6.png"
-                        }
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/gallary/pgl-6.png'} alt="PackageIMG" />
                     </a>
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="package-gallary-item">
                     <a
-                      href={
-                        process.env.PUBLIC_URL +
-                        "/images/gallary/packageGallaryFullImg9.png"
-                      }
+                      href={'/images/gallary/packageGallaryFullImg9.png'}
                       data-fancybox="gallery"
                       data-caption="Caption Here"
                     >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL + "/images/gallary/pgx-3.png"
-                        }
-                        alt="PackageIMG"
-                      />
+                      <img src={'/images/gallary/pgx-3.png'} alt="PackageIMG" />
                     </a>
                   </div>
                 </div>
@@ -923,7 +832,7 @@ function PackageDetailsTab() {
                   id="gmap_canvas"
                   src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=9&ie=UTF8&iwloc=&output=embed"
                 />
-                <Link to={"https://123movies-to.org"} />
+                <Link href={'https://123movies-to.org'}> </Link>
                 <br />
               </div>
             </div>

@@ -1,13 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import WidgetForm from "./WidgetForm";
-import WidgetPackageOffer from "./WidgetPackageOffer";
-import WidgetPackageTag from "./WidgetPackageTag";
-import PackageHeader from "./PackageHeader";
-import PackageDetailsTab from "./PackageDetailsTab";
+import React from 'react';
+import Link from 'next/link';
+import WidgetForm from './WidgetForm';
+import WidgetPackageOffer from './WidgetPackageOffer';
+import WidgetPackageTag from './WidgetPackageTag';
+import PackageHeader from './PackageHeader';
+import PackageDetailsTab from './PackageDetailsTab';
 
 function PackageDetailsWrap() {
-
   return (
     <>
       <div className="package-details-wrapper pt-110">
@@ -25,9 +24,9 @@ function PackageDetailsWrap() {
                 <WidgetPackageOffer />
                 <WidgetPackageTag />
                 <aside className="widget-banner mt-30">
-                  <Link to={"#"}>
+                  <Link href={'#'}>
                     <img
-                      src={process.env.PUBLIC_URL + "/images/banner/sidebar-banner.png"}
+                      src={'/images/banner/sidebar-banner.png'}
                       alt="PackageIMG"
                       className="img-fluid"
                     />

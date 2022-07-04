@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function WidgetPackageTag() {
   return (
@@ -9,14 +9,14 @@ function WidgetPackageTag() {
           <h4>Package Tag</h4>
         </div>
         <div className="tag-cloud widget-body">
-          <Link to={"#"}>Adventure</Link>
-          <Link to={"#"}>Trip</Link>
-          <Link to={"#"}>Guided</Link>
-          <Link to={"#"}>Historical</Link>
-          <Link to={"#"}>Road Trips</Link>
-          <Link to={"#"}>Tourist</Link>
-          <Link to={"#"}>Weekend</Link>
-          <Link to={"#"}>Hill</Link>
+          <Link href={'#'}>Adventure</Link>
+          <Link href={'#'}>Trip</Link>
+          <Link href={'#'}>Guided</Link>
+          <Link href={'#'}>Historical</Link>
+          <Link href={'#'}>Road Trips</Link>
+          <Link href={'#'}>Tourist</Link>
+          <Link href={'#'}>Weekend</Link>
+          <Link href={'#'}>Hill</Link>
         </div>
       </aside>
     </>
