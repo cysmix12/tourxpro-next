@@ -1,7 +1,7 @@
-import React from "react";
-import Breadcrumb from "../../../common/Breadcrumb";
-import Pagination from "../../../common/Pagination";
-import BlogCardWrap from "./BlogCardWrap";
+import React from 'react';
+import Breadcrumb from '../../../common/Breadcrumb';
+import Pagination from '../../../common/Pagination';
+import BlogCardWrap from './BlogCardWrap';
 
 function BlogGridPage() {
   return (
@@ -10,7 +10,7 @@ function BlogGridPage() {
       <div className="blog-wrapper pt-110">
         <div className="container">
           <BlogCardWrap />
-          <Pagination/>
+          <Pagination />
         </div>
       </div>
     </>

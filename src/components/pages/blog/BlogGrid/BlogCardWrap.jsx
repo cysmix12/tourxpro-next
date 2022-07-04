@@ -1,5 +1,5 @@
-import React from "react";
-import BlogCardGama from "./BlogCardGama";
+import React from 'react';
+import BlogCardGama from './BlogCardGama';
 
 function BlogCardWrap() {
   return (
@@ -7,7 +7,7 @@ function BlogCardWrap() {
       <div className="row g-4">
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-1.png"}
+            thumbImage={'/images/blog/blog-md-1.png'}
             writter="John Smith"
             date="November 16, 2022"
             title="Sollicitudin urna metus iaculis odio eget efficitur leo."
@@ -15,7 +15,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-2.png"}
+            thumbImage={'/images/blog/blog-md-2.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Variustempor convallis, mi ligula an suscipit nunc."
@@ -23,7 +23,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-3.png"}
+            thumbImage={'/images/blog/blog-md-3.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Aenean auctor porta sodales. Suspendisse fringilla neque."
@@ -31,7 +31,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-4.png"}
+            thumbImage={'/images/blog/blog-md-4.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Sollicitudin urna metus iaculis odio eget efficitur leo."
@@ -39,7 +39,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-5.png"}
+            thumbImage={'/images/blog/blog-md-5.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Variustempor convallis, mi ligula an suscipit nunc."
@@ -47,7 +47,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-6.png"}
+            thumbImage={'/images/blog/blog-md-6.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Nulla urna leo, volutpat eu maurisa eget luctus."
@@ -55,7 +55,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-7.png"}
+            thumbImage={'/images/blog/blog-md-7.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Duis pretium sit amet nisi a malesuada fusce congue."
@@ -63,7 +63,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-8.png"}
+            thumbImage={'/images/blog/blog-md-8.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Nam efficitur facilisis tinciduntent curabitur vitae."
@@ -71,7 +71,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-9.png"}
+            thumbImage={'/images/blog/blog-md-9.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Variustempor convallis, mi ligula an suscipit nunc."
@@ -79,7 +79,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-10.png"}
+            thumbImage={'/images/blog/blog-md-10.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Nullam tristique laoreet tortor, in interdum elit."
@@ -87,7 +87,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-11.png"}
+            thumbImage={'/images/blog/blog-md-11.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Mauris commodo massa vel diamnat feugiat sagittis Nunc."
@@ -95,7 +95,7 @@ function BlogCardWrap() {
         </div>
         <div className="col-lg-4 col-md-6">
           <BlogCardGama
-            thumbImage={process.env.PUBLIC_URL + "/images/blog/blog-md-12.png"}
+            thumbImage={'/images/blog/blog-md-12.png'}
             writter="John Smith"
             date="November 17, 2022"
             title="Fusce tristique placerat arcu, eget interdum lacus."
