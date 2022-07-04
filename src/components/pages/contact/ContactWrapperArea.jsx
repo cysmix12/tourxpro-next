@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function ContactWrapperArea() {
   return (
@@ -10,7 +10,7 @@ function ContactWrapperArea() {
             <div className="col-lg-6">
               <div className="contatc-intro-figure">
                 <img
-                  src={process.env.PUBLIC_URL + "/images/banner/contact-bg.png"}
+                  src={'/images/banner/contact-bg.png'}
                   alt="ContactBannerIMG"
                   className="img-fluid"
                 />
@@ -68,10 +68,10 @@ function ContactWrapperArea() {
                   title="map"
                   id="gmap_canvas"
                   src={
-                    "https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=9&ie=UTF8&iwloc=&output=embed"
+                    'https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=9&ie=UTF8&iwloc=&output=embed'
                   }
                 />
-                <Link to={"https://123movies-to.org"} />
+                <Link href={'https://123movies-to.org'}> </Link>
                 <br />
               </div>
             </div>
@@ -115,7 +115,7 @@ function ContactWrapperArea() {
                   rows={7}
                   required
                   placeholder="Your message"
-                  defaultValue={""}
+                  defaultValue={''}
                 />
               </div>
               <div className="custom-input-group">
