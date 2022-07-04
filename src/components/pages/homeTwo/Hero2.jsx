@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import Link from 'next/link';
 // import Swiper core and required modules
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
-import Select from "react-select";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import Select from 'react-select';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination]);
@@ -14,7 +14,7 @@ function Hero2() {
   const [selectedOption, setSelectedOption] = useState(null);
   const [startDate, setStartDate] = useState(new Date());
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const hero2 = {
     slidesPerView: 1,
@@ -28,35 +28,35 @@ function Hero2() {
       delay: 7000,
     },
     pagination: {
-      el: ".hero-two-pagination",
+      el: '.hero-two-pagination',
       clickable: true,
       renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + 0 + (index + 1) + "</span>";
+        return '<span class="' + className + '">' + 0 + (index + 1) + '</span>';
       },
     },
   };
   const optionsForDestination = [
-    { value: "1", label: "India" },
-        { value: "2", label: "Sri Lanka" },
-        { value: "3", label: "Solt Lake" },
-        { value: "4", label: " Kolkata" },
-        { value: "6", label: " Mohania" },
-        { value: "7", label: " Mumbai" },
-        { value: "8", label: " New Delhi" },
+    { value: '1', label: 'India' },
+    { value: '2', label: 'Sri Lanka' },
+    { value: '3', label: 'Solt Lake' },
+    { value: '4', label: ' Kolkata' },
+    { value: '6', label: ' Mohania' },
+    { value: '7', label: ' Mumbai' },
+    { value: '8', label: ' New Delhi' },
   ];
   const optionsForTravel = [
-    { value: "1", label: "Adventure Tour" },
-        { value: "2", label: "Group Tour" },
-        { value: "3", label: "Couple Tour" },
-        { value: "4", label: "Sea Beach" },
-        { value: "5", label: "Mountain Tour" },
+    { value: '1', label: 'Adventure Tour' },
+    { value: '2', label: 'Group Tour' },
+    { value: '3', label: 'Couple Tour' },
+    { value: '4', label: 'Sea Beach' },
+    { value: '5', label: 'Mountain Tour' },
   ];
   const optionsForPerson = [
-    { value: "1", label: "01" },
-    { value: "2", label: "02" },
-    { value: "3", label: "03" },
-    { value: "4", label: "04" },
-    { value: "5", label: "05" },
+    { value: '1', label: '01' },
+    { value: '2', label: '02' },
+    { value: '3', label: '03' },
+    { value: '4', label: '04' },
+    { value: '5', label: '05' },
   ];
   return (
     <>
@@ -91,12 +91,11 @@ function Hero2() {
                       <div className="searchbox-input">
                         <label htmlFor="activity-dropdown">Travel Type</label>
                         <Select
-                        className="selectbox"
+                          className="selectbox"
                           defaultValue={selectedOption}
                           placeholder="All activities"
                           onChange={setSelectedOption}
                           options={optionsForTravel}
-
                         ></Select>
                       </div>
                     </div>
@@ -109,7 +108,7 @@ function Hero2() {
                       <div className="searchbox-input">
                         <label htmlFor="activity-dropdown">Person</label>
                         <Select
-                        className="selectbox"
+                          className="selectbox"
                           defaultValue={selectedOption}
                           onChange={setSelectedOption}
                           options={optionsForPerson}
@@ -125,7 +124,10 @@ function Hero2() {
                       </div>
                       <div className="searchbox-input">
                         <label htmlFor="activity-dropdown">Journey Date</label>
-                        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                        <DatePicker
+                          selected={startDate}
+                          onChange={(date) => setStartDate(date)}
+                        />
                       </div>
                     </div>
                   </div>
@@ -133,10 +135,7 @@ function Hero2() {
               </div>
               <div className="col-lg-2">
                 <div className="main-form-submit">
-                  <Link
-                    onClick={scrollTop}
-                    to={`${process.env.PUBLIC_URL}/package`}
-                  >
+                  <Link onClick={scrollTop} href={`/package`}>
                     <button type="submit">Find Now</button>
                   </Link>
                 </div>
@@ -173,14 +172,14 @@ function Hero2() {
                         <div className="hero-btns">
                           <Link
                             onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-sidebar`}
+                            href={`/package-sidebar`}
                             className="button-fill-round"
                           >
                             Book Now
                           </Link>
                           <Link
                             onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-details`}
+                            href={`/package-details`}
                             className="button-fill-round"
                           >
                             View Details
@@ -191,7 +190,7 @@ function Hero2() {
                     <div className="col-lg-6">
                       <div className="hero-image-group">
                         <img
-                          src={process.env.PUBLIC_URL + "/images/banner/hero2-image-group.png"}
+                          src={'/images/banner/hero2-image-group.png'}
                           alt="HeroIMG"
                           className="img-fluid"
                         />
@@ -224,14 +223,14 @@ function Hero2() {
                         <div className="hero-btns">
                           <Link
                             onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-details`}
+                            href={`/package-details`}
                             className="button-fill-round"
                           >
                             Book Now
                           </Link>
                           <Link
                             onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-details`}
+                            href={`/package-details`}
                             className="button-fill-round"
                           >
                             View Details
@@ -242,7 +241,7 @@ function Hero2() {
                     <div className="col-lg-6">
                       <div className="hero-image-group">
                         <img
-                          src={process.env.PUBLIC_URL + "/images/banner/hero2-image-group2.png"}
+                          src={'/images/banner/hero2-image-group2.png'}
                           alt="HeroIMG"
                           className="img-fluid"
                         />
@@ -276,14 +275,14 @@ function Hero2() {
                         <div className="hero-btns">
                           <Link
                             onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-details`}
+                            href={`/package-details`}
                             className="button-fill-round"
                           >
                             Book Now
                           </Link>
                           <Link
                             onClick={scrollTop}
-                            to={`${process.env.PUBLIC_URL}/package-details`}
+                            href={`/package-details`}
                             className="button-fill-round"
                           >
                             View Details
@@ -294,7 +293,7 @@ function Hero2() {
                     <div className="col-lg-6">
                       <div className="hero-image-group">
                         <img
-                          src={process.env.PUBLIC_URL + "/images/banner/hero2-image-group3.png"}
+                          src={'/images/banner/hero2-image-group3.png'}
                           alt="HeroIMG"
                           className="img-fluid"
                         />

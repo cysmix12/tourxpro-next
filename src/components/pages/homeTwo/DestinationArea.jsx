@@ -1,9 +1,9 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import Swiper core and required modules
-import SwiperCore, { Autoplay, Navigation } from "swiper";
-import DestinationCard2 from "./DestinationCard2";
+import SwiperCore, { Autoplay, Navigation } from 'swiper';
+import DestinationCard2 from './DestinationCard2';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);
@@ -20,7 +20,7 @@ function DestinationArea() {
       delay: 1500,
     },
     pagination: {
-      el: ".testi-pagination",
+      el: '.testi-pagination',
       clickable: true,
     },
     breakpoints: {
@@ -56,13 +56,13 @@ function DestinationArea() {
             <div className="">
               <SwiperSlide className="swiper-slide">
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm5.png"}
+                  image={'/images/destination/des-sm5.png'}
                   placeName="Augsburg"
                   palceCount="45"
                   altNo="1"
                 />
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm2.png"}
+                  image={'/images/destination/des-sm2.png'}
                   placeName="Marakana"
                   palceCount="25"
                   altNo="2"
@@ -70,13 +70,13 @@ function DestinationArea() {
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm3.png"}
+                  image={'/images/destination/des-sm3.png'}
                   placeName="Nuremberg"
                   palceCount="30"
                   altNo="3"
                 />
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm4.png"}
+                  image={'/images/destination/des-sm4.png'}
                   placeName="Bielefeld"
                   palceCount="35"
                   altNo="4"
@@ -84,13 +84,13 @@ function DestinationArea() {
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm5.png"}
+                  image={'/images/destination/des-sm5.png'}
                   placeName="Düsseldorf"
                   palceCount="30"
                   altNo="5"
                 />
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm5.png"}
+                  image={'/images/destination/des-sm5.png'}
                   placeName="Wiesbaden"
                   palceCount="45"
                   altNo="6"
@@ -98,13 +98,13 @@ function DestinationArea() {
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm7.png"}
+                  image={'/images/destination/des-sm7.png'}
                   placeName="Chemnitz"
                   palceCount="15"
                   altNo="7"
                 />
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm1.png"}
+                  image={'/images/destination/des-sm1.png'}
                   placeName="Oberhausen"
                   palceCount="24"
                   altNo="8"
@@ -112,13 +112,13 @@ function DestinationArea() {
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm6.png"}
+                  image={'/images/destination/des-sm6.png'}
                   placeName="Nuremberg"
                   palceCount="30"
                   altNo="9"
                 />
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm6.png"}
+                  image={'/images/destination/des-sm6.png'}
                   placeName="Bielefeld"
                   palceCount="35"
                   altNo="10"
@@ -126,13 +126,13 @@ function DestinationArea() {
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm1.png"}
+                  image={'/images/destination/des-sm1.png'}
                   placeName="Chemnitz"
                   palceCount="15"
                   altNo="11"
                 />
                 <DestinationCard2
-                  image={process.env.PUBLIC_URL + "/images/destination/des-sm5.png"}
+                  image={'/images/destination/des-sm5.png'}
                   placeName="Oberhausen"
                   palceCount="24"
                   altNo="12"

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function WorldMapArea() {
   return (
@@ -13,7 +13,7 @@ function WorldMapArea() {
         </div>
         <div className="world-map-wrap">
           <div className="world-map-background">
-            <img src={process.env.PUBLIC_URL + "/images/banner/map-bg.png"} alt="mapIMG" />
+            <img src={'/images/banner/map-bg.png'} alt="mapIMG" />
           </div>
           <div className="single-location location-1">
             <div className="location-icon">

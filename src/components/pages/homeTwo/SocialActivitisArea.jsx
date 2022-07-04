@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 // import Swiper core and required modules
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination]);
@@ -18,7 +18,7 @@ function SocialActivitisArea() {
       delay: 1500,
     },
     pagination: {
-      el: ".testi-pagination",
+      el: '.testi-pagination',
       clickable: true,
     },
     breakpoints: {
@@ -49,12 +49,7 @@ function SocialActivitisArea() {
               <SwiperSlide className="swiper-slide">
                 <div className="social-card">
                   <div className="social-thumb">
-                    <img
-                      src={
-                        process.env.PUBLIC_URL + "/images/gallary/social1.png"
-                      }
-                      alt="SocialIMG"
-                    />
+                    <img src={'/images/gallary/social1.png'} alt="SocialIMG" />
                   </div>
                   <a
                     rel="noopener noreferrer"
@@ -69,12 +64,7 @@ function SocialActivitisArea() {
               <SwiperSlide className="swiper-slide">
                 <div className="social-card">
                   <div className="social-thumb">
-                    <img
-                      src={
-                        process.env.PUBLIC_URL + "/images/gallary/social2.png"
-                      }
-                      alt="SocialIMG"
-                    />
+                    <img src={'/images/gallary/social2.png'} alt="SocialIMG" />
                   </div>
                   <a
                     rel="noopener noreferrer"
@@ -89,12 +79,7 @@ function SocialActivitisArea() {
               <SwiperSlide className="swiper-slide">
                 <div className="social-card">
                   <div className="social-thumb">
-                    <img
-                      src={
-                        process.env.PUBLIC_URL + "/images/gallary/social3.png"
-                      }
-                      alt="SocialIMG"
-                    />
+                    <img src={'/images/gallary/social3.png'} alt="SocialIMG" />
                   </div>
                   <a
                     rel="noopener noreferrer"
@@ -109,12 +94,7 @@ function SocialActivitisArea() {
               <SwiperSlide className="swiper-slide">
                 <div className="social-card">
                   <div className="social-thumb">
-                    <img
-                      src={
-                        process.env.PUBLIC_URL + "/images/gallary/social4.png"
-                      }
-                      alt="SocialIMG"
-                    />
+                    <img src={'/images/gallary/social4.png'} alt="SocialIMG" />
                   </div>
                   <a
                     rel="noopener noreferrer"
@@ -129,12 +109,7 @@ function SocialActivitisArea() {
               <SwiperSlide className="swiper-slide">
                 <div className="social-card">
                   <div className="social-thumb">
-                    <img
-                      src={
-                        process.env.PUBLIC_URL + "/images/gallary/social5.png"
-                      }
-                      alt="SocialIMG"
-                    />
+                    <img src={'/images/gallary/social5.png'} alt="SocialIMG" />
                   </div>
                   <a
                     rel="noopener noreferrer"

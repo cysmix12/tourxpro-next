@@ -1,5 +1,5 @@
-import React from "react";
-import GuideCardGama from "./GuideCardGama";
+import React from 'react';
+import GuideCardGama from './GuideCardGama';
 
 function GuideArea() {
   return (
@@ -16,19 +16,19 @@ function GuideArea() {
           <div className="row g-4">
             <div className="col-lg-4 col-md-6">
               <GuideCardGama
-                image={process.env.PUBLIC_URL + "/images/guide/guide-md4.png"}
+                image={'/images/guide/guide-md4.png'}
                 name="Amam Groff"
               />
             </div>
             <div className="col-lg-4 col-md-6">
               <GuideCardGama
-                image={process.env.PUBLIC_URL + "/images/guide/guide-md5.png"}
+                image={'/images/guide/guide-md5.png'}
                 name="Sebastian Mateo"
               />
             </div>
             <div className="col-lg-4 col-md-6">
               <GuideCardGama
-                image={process.env.PUBLIC_URL + "/images/guide/guide-md6.png"}
+                image={'/images/guide/guide-md6.png'}
                 name="Theodore Aiden"
               />
             </div>

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Link } from "react-router-dom";
-import PackageCard from "../packageGrid/PackageCard";
+import Link from 'next/link';
+import PackageCard from '../packageGrid/PackageCard';
 
 function OfferPackage() {
-  const scrollTop = () => window.scrollTo({ top: onabort, behavior: "smooth" });
+  const scrollTop = () => window.scrollTo({ top: onabort, behavior: 'smooth' });
   return (
     <div className="package-area offer-package-style-one pt-110">
       <div className="container">
@@ -75,9 +75,7 @@ function OfferPackage() {
                 <div className="row g-4">
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha1.png"
-                      }
+                      image={'/images/package/p-alpha1.png'}
                       title="Etiam placerat dictum consequat an pellentesque."
                       date=" 5 Day & 6 Night"
                       price="$79.00"
@@ -85,9 +83,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6 ">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha2.png"
-                      }
+                      image={'/images/package/p-alpha2.png'}
                       title="Varius condimentum consequat frin aenean pretium."
                       date=" 3 Day & 4 Night"
                       price="$82.00"
@@ -95,9 +91,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha3.png"
-                      }
+                      image={'/images/package/p-alpha3.png'}
                       title="Varius condimentum consequat frin aenean pretium."
                       date=" 3 Day & 4 Night"
                       price="$82.00"
@@ -105,9 +99,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha4.png"
-                      }
+                      image={'/images/package/p-alpha4.png'}
                       title="Praesent sed elit mi. In risus nullaam efficitur."
                       date=" 4 Day & 4 Night"
                       price="$89.00"
@@ -115,9 +107,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha5.png"
-                      }
+                      image={'/images/package/p-alpha5.png'}
                       title="Sed ultricies sapien arcu, sed cong feugiat."
                       date=" 5 Day & 6 Night"
                       price="$189.00"
@@ -125,9 +115,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha6.png"
-                      }
+                      image={'/images/package/p-alpha6.png'}
                       title="Pellentesque habitant morbi malesua tristique."
                       date="4 Day & 3 Night"
                       price="$129.00"
@@ -137,7 +125,7 @@ function OfferPackage() {
                 <div className="package-page-btn text-center mt-50">
                   <Link
                     onClick={scrollTop}
-                    to={`${process.env.PUBLIC_URL}/package`}
+                    href={`/package`}
                     className="button-fill-round"
                   >
                     View All Offer
@@ -153,9 +141,7 @@ function OfferPackage() {
                 <div className="row g-4">
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha6.png"
-                      }
+                      image={'/images/package/p-alpha6.png'}
                       title="Pellentesque habitant morbi malesua tristique."
                       date="4 Day & 3 Night"
                       price="$129.00"
@@ -163,9 +149,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha5.png"
-                      }
+                      image={'/images/package/p-alpha5.png'}
                       title="Sed ultricies sapien arcu, sed cong feugiat."
                       date=" 5 Day & 6 Night"
                       price="$189.00"
@@ -173,9 +157,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha4.png"
-                      }
+                      image={'/images/package/p-alpha4.png'}
                       title="Praesent sed elit mi. In risus nullaam efficitur."
                       date=" 4 Day & 4 Night"
                       price="$89.00"
@@ -185,7 +167,7 @@ function OfferPackage() {
                 <div className="package-page-btn text-center mt-60">
                   <Link
                     onClick={scrollTop}
-                    to={`${process.env.PUBLIC_URL}/package`}
+                    href={`/package`}
                     className="button-fill-round"
                   >
                     View All Offer
@@ -201,9 +183,7 @@ function OfferPackage() {
                 <div className="row g-4">
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha1.png"
-                      }
+                      image={'/images/package/p-alpha1.png'}
                       title="Etiam placerat dictum consequat an pellentesque."
                       date=" 5 Day & 6 Night"
                       price="$79.00"
@@ -211,9 +191,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6 ">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha2.png"
-                      }
+                      image={'/images/package/p-alpha2.png'}
                       title="Varius condimentum consequat frin aenean pretium."
                       date=" 3 Day & 4 Night"
                       price="$82.00"
@@ -221,9 +199,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha3.png"
-                      }
+                      image={'/images/package/p-alpha3.png'}
                       title="Varius condimentum consequat frin aenean pretium."
                       date=" 3 Day & 4 Night"
                       price="$82.00"
@@ -231,9 +207,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha4.png"
-                      }
+                      image={'/images/package/p-alpha4.png'}
                       title="Praesent sed elit mi. In risus nullaam efficitur."
                       date=" 4 Day & 4 Night"
                       price="$89.00"
@@ -241,9 +215,7 @@ function OfferPackage() {
                   </div>
                   <div className="col-lg-4 col-md-6">
                     <PackageCard
-                      image={
-                        process.env.PUBLIC_URL + "/images/package/p-alpha5.png"
-                      }
+                      image={'/images/package/p-alpha5.png'}
                       title="Sed ultricies sapien arcu, sed cong feugiat."
                       date=" 5 Day & 6 Night"
                       price="$189.00"
@@ -253,7 +225,7 @@ function OfferPackage() {
                 <div className="package-page-btn text-center mt-60">
                   <Link
                     onClick={scrollTop}
-                    to={`${process.env.PUBLIC_URL}/package`}
+                    href={`/package`}
                     className="button-fill-round"
                   >
                     View All Offer

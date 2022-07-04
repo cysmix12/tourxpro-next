@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function NewsLetterArea() {
   const scrollTop = () =>
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   return (
     <>
@@ -26,7 +26,7 @@ function NewsLetterArea() {
                   <div className="explore-btn">
                     <Link
                       onClick={scrollTop}
-                      to={`${process.env.PUBLIC_URL}/package`}
+                      href={`/package`}
                       className="button-fill-round"
                     >
                       Explore Now

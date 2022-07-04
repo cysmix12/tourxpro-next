@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 // import Swiper core and required modules
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay, Pagination]);
 
@@ -16,7 +16,7 @@ function TestimonialArea() {
       delay: 1500,
     },
     pagination: {
-      el: ".testimonial-pagination",
+      el: '.testimonial-pagination',
       clickable: true,
     },
   };
@@ -38,10 +38,7 @@ function TestimonialArea() {
                   <div className="testimonial-card-gamma mx-auto">
                     <div className="testimonial-quote-icon">
                       <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/images/icons/qoute-icon.svg"
-                        }
+                        src={'/images/icons/qoute-icon.svg'}
                         alt="testimonialIMG"
                         className="img-fluid"
                       />
@@ -63,10 +60,7 @@ function TestimonialArea() {
                         <div className="reviewr-info">
                           <div className="single-thumb">
                             <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                "/images/reviewer/testti-thumb1.png"
-                              }
+                              src={'/images/reviewer/testti-thumb1.png'}
                               alt="testimonialIMG"
                             />
                           </div>
@@ -100,10 +94,7 @@ function TestimonialArea() {
                   <div className="testimonial-card-gamma mx-auto">
                     <div className="testimonial-quote-icon">
                       <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/images/icons/qoute-icon.svg"
-                        }
+                        src={'/images/icons/qoute-icon.svg'}
                         alt="testimonialIMG"
                         className="img-fluid"
                       />
@@ -125,10 +116,7 @@ function TestimonialArea() {
                         <div className="reviewr-info">
                           <div className="single-thumb">
                             <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                "/images/reviewer/testti-thumb2.png"
-                              }
+                              src={'/images/reviewer/testti-thumb2.png'}
                               alt="testimonialIMG"
                             />
                           </div>
@@ -162,10 +150,7 @@ function TestimonialArea() {
                   <div className="testimonial-card-gamma mx-auto">
                     <div className="testimonial-quote-icon">
                       <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/images/icons/qoute-icon.svg"
-                        }
+                        src={'/images/icons/qoute-icon.svg'}
                         alt="testimonialIMG"
                         className="img-fluid"
                       />
@@ -187,10 +172,7 @@ function TestimonialArea() {
                         <div className="reviewr-info">
                           <div className="single-thumb">
                             <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                "/images/reviewer/testti-thumb1.png"
-                              }
+                              src={'/images/reviewer/testti-thumb1.png'}
                               alt="testimonialIMG"
                             />
                           </div>
@@ -224,10 +206,7 @@ function TestimonialArea() {
                   <div className="testimonial-card-gamma mx-auto">
                     <div className="testimonial-quote-icon">
                       <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/images/icons/qoute-icon.svg"
-                        }
+                        src={'/images/icons/qoute-icon.svg'}
                         alt="testimonialIMG"
                         className="img-fluid"
                       />
@@ -249,10 +228,7 @@ function TestimonialArea() {
                         <div className="reviewr-info">
                           <div className="single-thumb">
                             <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                "/images/reviewer/testti-thumb1.png"
-                              }
+                              src={'/images/reviewer/testti-thumb1.png'}
                               alt="testimonialIMG"
                             />
                           </div>
@@ -286,10 +262,7 @@ function TestimonialArea() {
                   <div className="testimonial-card-gamma mx-auto">
                     <div className="testimonial-quote-icon">
                       <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/images/icons/qoute-icon.svg"
-                        }
+                        src={'/images/icons/qoute-icon.svg'}
                         alt="testimonialIMG"
                         className="img-fluid"
                       />
@@ -311,10 +284,7 @@ function TestimonialArea() {
                         <div className="reviewr-info">
                           <div className="single-thumb">
                             <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                "/images/reviewer/testti-thumb2.png"
-                              }
+                              src={'/images/reviewer/testti-thumb2.png'}
                               alt="testimonialIMG"
                             />
                           </div>

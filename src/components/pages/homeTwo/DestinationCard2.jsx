@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function DestinationCard2(props) {
-  const scrollTop = () => window.scrollTo({ topo: 0, behavior: "smooth" });
+  const scrollTop = () => window.scrollTo({ topo: 0, behavior: 'smooth' });
   return (
     <>
       <div className="destination-card-style-two">
@@ -11,10 +11,7 @@ function DestinationCard2(props) {
         </div>
         <div className="d-card-content">
           <h4 className="destination-title">
-            <Link
-              onClick={scrollTop}
-              to={`${process.env.PUBLIC_URL}/destination-details`}
-            >
+            <Link onClick={scrollTop} href={`/destination-details`}>
               {props.placeName}
             </Link>
           </h4>
