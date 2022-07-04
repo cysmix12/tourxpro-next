@@ -1,14 +1,14 @@
-import React from "react";
-import Breadcrumb from "../../common/Breadcrumb";
-import DestinationDetailsWrapper from "./DestinationDetailsWrapper";
+import React from 'react';
+import Breadcrumb from '../../common/Breadcrumb';
+import DestinationDetailsWrapper from './DestinationDetailsWrapper';
 
 function DestinationDetails() {
   return (
     <>
-    <Breadcrumb name="Destination Details" />
-    <DestinationDetailsWrapper />
-  </>
-  )
+      <Breadcrumb name="Destination Details" />
+      <DestinationDetailsWrapper />
+    </>
+  );
 }
 
-export default DestinationDetails
+export default DestinationDetails;

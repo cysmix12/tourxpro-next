@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { SRLWrapper } from "simple-react-lightbox";
+import React from 'react';
+import Link from 'next/link';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 function DestinationDetailsWrapper() {
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   return (
     <>
       <div className="destination-details-wrapper pt-110">
@@ -13,10 +13,7 @@ function DestinationDetailsWrapper() {
               <div className="destination-details">
                 <div className="dd-thumb">
                   <img
-                    src={
-                      process.env.PUBLIC_URL +
-                      "/images/destination/dd-thumb.png"
-                    }
+                    src={'/images/destination/dd-thumb.png'}
                     alt="BlogDetailsIMG"
                   />
                 </div>
@@ -35,7 +32,7 @@ function DestinationDetailsWrapper() {
                     id lectus. Suspendissendt blandit interdum.
                   </p>
                   <p>
-                    {" "}
+                    {' '}
                     Sed pellentesque at nunc consectetur.Duis rutrum nisl urna.
                     Maecenas vel libero faucibus nisi venenatis hendrerit a id
                     lectus. Suspendissendt blandit interdum. Sed pellentesque at
@@ -48,10 +45,7 @@ function DestinationDetailsWrapper() {
                     <div className="col-sm-6">
                       <div className="dd-inner-group">
                         <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/images/destination/dd-img1.png"
-                          }
+                          src={'/images/destination/dd-img1.png'}
                           alt="BlogDetailsIMG"
                         />
                       </div>
@@ -59,10 +53,7 @@ function DestinationDetailsWrapper() {
                     <div className="col-sm-6">
                       <div className="dd-inner-group">
                         <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/images/destination/dd-img2.png"
-                          }
+                          src={'/images/destination/dd-img2.png'}
                           alt="BlogDetailsIMG"
                         />
                       </div>
@@ -121,7 +112,7 @@ function DestinationDetailsWrapper() {
                           id="gmap_canvas"
                           src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=9&ie=UTF8&iwloc=&output=embed"
                         />
-                        <Link to={"https://123movies-to.org"} />
+                        <Link href={'https://123movies-to.org'}> </Link>
                         <br />
                       </div>
                     </div>
@@ -216,128 +207,86 @@ function DestinationDetailsWrapper() {
                     <h4>New Destination</h4>
                   </div>
                   <SRLWrapper>
-                  <ul className=" widget-body">
-                    <li>
-                      <a
-                        href={
-                          process.env.PUBLIC_URL +
-                          "/images/gallary/WidgetfullIMG1.png"
-                        }
-                        data-fancybox="gallery"
-                        data-caption="Caption Here"
-                      >
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/images/gallary/sb-gallary-1.png"
-                          }
-                          alt="BlogDetailsIMG"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href={
-                          process.env.PUBLIC_URL +
-                          "/images/gallary/WidgetfullIMG3.png"
-                        }
-                        data-fancybox="gallery"
-                        data-caption="Caption Here"
-                      >
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/images/gallary/sb-gallary-2.png"
-                          }
-                          alt="BlogDetailsIMG"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href={
-                          process.env.PUBLIC_URL +
-                          "/images/gallary/WidgetfullIMG5.png"
-                        }
-                        data-fancybox="gallery"
-                        data-caption="Caption Here"
-                      >
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/images/gallary/sb-gallary-3.png"
-                          }
-                          alt="BlogDetailsIMG"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href={
-                          process.env.PUBLIC_URL +
-                          "/images/gallary/WidgetfullIMG2.png"
-                        }
-                        data-fancybox="gallery"
-                        data-caption="Caption Here"
-                      >
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/images/gallary/sb-gallary-4.png"
-                          }
-                          alt="BlogDetailsIMG"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href={
-                          process.env.PUBLIC_URL +
-                          "/images/gallary/WidgetfullIMG4.png"
-                        }
-                        data-fancybox="gallery"
-                        data-caption="Caption Here"
-                      >
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/images/gallary/sb-gallary-5.png"
-                          }
-                          alt="BlogDetailsIMG"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href={
-                          process.env.PUBLIC_URL +
-                          "/images/gallary/WidgetfullIMG6.png"
-                        }
-                        data-fancybox="gallery"
-                        data-caption="Caption Here"
-                      >
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            "/images/gallary/sb-gallary-6.png"
-                          }
-                          alt="BlogDetailsIMG"
-                        />
-                      </a>
-                    </li>
-                  </ul>
+                    <ul className=" widget-body">
+                      <li>
+                        <a
+                          href={'/images/gallary/WidgetfullIMG1.png'}
+                          data-fancybox="gallery"
+                          data-caption="Caption Here"
+                        >
+                          <img
+                            src={'/images/gallary/sb-gallary-1.png'}
+                            alt="BlogDetailsIMG"
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href={'/images/gallary/WidgetfullIMG3.png'}
+                          data-fancybox="gallery"
+                          data-caption="Caption Here"
+                        >
+                          <img
+                            src={'/images/gallary/sb-gallary-2.png'}
+                            alt="BlogDetailsIMG"
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href={'/images/gallary/WidgetfullIMG5.png'}
+                          data-fancybox="gallery"
+                          data-caption="Caption Here"
+                        >
+                          <img
+                            src={'/images/gallary/sb-gallary-3.png'}
+                            alt="BlogDetailsIMG"
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href={'/images/gallary/WidgetfullIMG2.png'}
+                          data-fancybox="gallery"
+                          data-caption="Caption Here"
+                        >
+                          <img
+                            src={'/images/gallary/sb-gallary-4.png'}
+                            alt="BlogDetailsIMG"
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href={'/images/gallary/WidgetfullIMG4.png'}
+                          data-fancybox="gallery"
+                          data-caption="Caption Here"
+                        >
+                          <img
+                            src={'/images/gallary/sb-gallary-5.png'}
+                            alt="BlogDetailsIMG"
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href={'/images/gallary/WidgetfullIMG6.png'}
+                          data-fancybox="gallery"
+                          data-caption="Caption Here"
+                        >
+                          <img
+                            src={'/images/gallary/sb-gallary-6.png'}
+                            alt="BlogDetailsIMG"
+                          />
+                        </a>
+                      </li>
+                    </ul>
                   </SRLWrapper>
                 </aside>
                 <aside className="widget-banner mt-30">
-                  <Link
-                    onClick={scrollTop}
-                    to={`${process.env.PUBLIC_URL}/package-details`}
-                  >
+                  <Link onClick={scrollTop} href={`/package-details`}>
                     <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/images/banner/sidebar-banner.png"
-                      }
+                      src={'/images/banner/sidebar-banner.png'}
                       alt="BlogDetailsIMG"
                       className="img-fluid"
                     />
