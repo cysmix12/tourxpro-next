@@ -1,6 +1,6 @@
-import React from "react";
-import Breadcrumb from "../../common/Breadcrumb";
-import GuideWrap from "./GuideWrap";
+import React from 'react';
+import Breadcrumb from '../../common/Breadcrumb';
+import GuideWrap from './GuideWrap';
 
 function GuidePage() {
   return (
