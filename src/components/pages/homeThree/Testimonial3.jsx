@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 // import Swiper core and required modules
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { EffectFade, Navigation, Pagination } from 'swiper';
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, EffectFade]);
 function Testimonial3() {
@@ -15,8 +15,8 @@ function Testimonial3() {
       delay: 15000,
     },
     navigation: {
-      nextEl: ".testi-next4",
-      prevEl: ".testi-prev4",
+      nextEl: '.testi-next4',
+      prevEl: '.testi-prev4',
     },
     breakpoints: {
       480: {
@@ -55,7 +55,7 @@ function Testimonial3() {
                   role="button"
                   aria-label="Previous slide"
                 >
-                  {" "}
+                  {' '}
                   <i className="bi bi-arrow-left" />
                 </div>
                 <div
@@ -112,7 +112,7 @@ function TestimonialCardBeta(props) {
       <div className="testimonial-card-beta mx-auto">
         <div className="testimonial-quote-icon">
           <img
-            src={process.env.PUBLIC_URL + "/images/icons/quote-review.svg"}
+            src={'/images/icons/quote-review.svg'}
             alt="testimonial-img"
             className="img-fluid"
           />
@@ -121,7 +121,7 @@ function TestimonialCardBeta(props) {
           <div className="testimonial-info">
             <div className="reviewr-info">
               <div className="single-thumb">
-                <img src={`${process.env.PUBLIC_URL} ${props.image}`} alt="" />
+                <img src={` ${props.image}`} alt="" />
               </div>
               <div className="reviwer-info-cotn">
                 <h5 className="reviewer-name">{props.name}</h5>

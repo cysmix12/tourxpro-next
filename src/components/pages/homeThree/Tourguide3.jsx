@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Link from 'next/link';
 
 function Tourguide3() {
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   return (
     <>
       <div className="guide-area guide-style-one pt-110">
@@ -23,38 +23,32 @@ function Tourguide3() {
             <div className="col-lg-4 col-md-6 col-md-10">
               <div className="guide-card-beta">
                 <div className="guide-image">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/guide/guide31.png"}
-                    alt="guide images"
-                  />
+                  <img src={'/images/guide/guide31.png'} alt="guide images" />
                   <ul className="guide-social-links d-flex justify-content-center flex-column gap-3">
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-instagram" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-facebook" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-twitter" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-whatsapp" />
                       </Link>
                     </li>
                   </ul>
                 </div>
                 <div className="guide-content">
-                  <Link
-                    to={`${process.env.PUBLIC_URL}/guide`}
-                    onClick={scrollTop}
-                  >
+                  <Link href={`/guide`} onClick={scrollTop}>
                     <h4 className="guide-name">Sebastian Mateo</h4>
                   </Link>
                   <h6 className="guide-designation">Tour Guide</h6>
@@ -64,38 +58,32 @@ function Tourguide3() {
             <div className="col-lg-4 col-md-6 col-md-10">
               <div className="guide-card-beta">
                 <div className="guide-image">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/guide/guide32.png"}
-                    alt=""
-                  />
+                  <img src={'/images/guide/guide32.png'} alt="" />
                   <ul className="guide-social-links d-flex justify-content-center flex-column gap-3">
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-instagram" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-facebook" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-twitter" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-whatsapp" />
                       </Link>
                     </li>
                   </ul>
                 </div>
                 <div className="guide-content">
-                  <Link
-                    to={`${process.env.PUBLIC_URL}/guide`}
-                    onClick={scrollTop}
-                  >
+                  <Link href={`/guide`} onClick={scrollTop}>
                     <h4 className="guide-name">Theodore Aiden</h4>
                   </Link>
                   <h6 className="guide-designation">Tour Guide</h6>
@@ -105,38 +93,32 @@ function Tourguide3() {
             <div className="col-lg-4 col-md-6 col-md-10">
               <div className="guide-card-beta">
                 <div className="guide-image">
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/guide/guide33.png"}
-                    alt=""
-                  />
+                  <img src={'/images/guide/guide33.png'} alt="" />
                   <ul className="guide-social-links d-flex justify-content-center flex-column gap-3">
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-instagram" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-facebook" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-twitter" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={"#"}>
+                      <Link href={'#'}>
                         <i className="bx bxl-whatsapp" />
                       </Link>
                     </li>
                   </ul>
                 </div>
                 <div className="guide-content">
-                  <Link
-                    to={`${process.env.PUBLIC_URL}/guide`}
-                    onClick={scrollTop}
-                  >
+                  <Link href={`/guide`} onClick={scrollTop}>
                     <h4 className="guide-name">Lincoln Anthony</h4>
                   </Link>
                   <h6 className="guide-designation">Tour Guide</h6>
