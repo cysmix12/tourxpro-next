@@ -114,33 +114,11 @@ function OfferPackage() {
                   aria-labelledby="pills-offer2"
                 >
                   <div className="row d-flex justify-content-center g-4">
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer6.png"
-                        time="6 Day &amp; 7 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$669.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer1.png"
-                        time="2 Day &amp; 2 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$69.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer2.png"
-                        time="1 Day &amp; 2 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$19.00 "
-                      />
-                    </div>
+                    {data.tours.slice(0, 3).map((tour, i) => (
+                      <div key={i} className="col-lg-4 col-md-6 fadeffect">
+                        <OfferPackageCardBeta {...tour} />
+                      </div>
+                    ))}
                   </div>
                   <div className="package-page-btn text-center mt-60">
                     <Link
@@ -159,41 +137,11 @@ function OfferPackage() {
                   aria-labelledby="pills-offer3"
                 >
                   <div className="row d-flex justify-content-center g-4">
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer5.png"
-                        time="5 Day &amp; 4 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$119.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer6.png"
-                        time="2 Day &amp; 34night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$159.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer3.png"
-                        time="4 Day &amp; 3 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$159.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer4.png"
-                        time="3 Day &amp; 2 night"
-                        title="Etiam placerat dictum consequat an Pellentesque habitant morbi."
-                        price="$79.00 "
-                      />
-                    </div>
+                    {data.tours.slice(0, 4).map((tour, i) => (
+                      <div key={i} className="col-lg-4 col-md-6 fadeffect">
+                        <OfferPackageCardBeta {...tour} />
+                      </div>
+                    ))}
                   </div>
                   <div className="package-page-btn text-center mt-60">
                     <Link
