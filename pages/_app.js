@@ -1,5 +1,6 @@
 import SimpleReactLightbox from 'simple-react-lightbox';
 import Head from 'next/head';
+import Script from 'next/script';
 
 import { MockProvider } from '../src/context';
 
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </SimpleReactLightbox>
       </MockProvider>
+      <Script src="/plugin/js/bootstrap.bundle.min.js" />
     </>
   );
 }
