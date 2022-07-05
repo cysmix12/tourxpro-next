@@ -8,7 +8,7 @@ function BlogCardAlpha(props) {
       <div className="blog-card-alpha">
         <div className="blog-thumb">
           <Link onClick={scrollTop} href={`/blog-details`}>
-            <img src={props.image} alt="BlogIMG" />
+            <img src={props.thumbImage} alt="BlogIMG" />
           </Link>
           <div className="blog-lavel">
             <Link href={'#'}>

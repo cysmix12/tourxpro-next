@@ -1,7 +1,11 @@
-import React from 'react';
+import { useContext } from 'react';
+
 import BlogCardAlpha from './BlogCardAlpha';
+import { MockContext } from '../../../context';
 
 function LatestNews() {
+  const { data } = useContext(MockContext);
+
   return (
     <>
       {/* =============== Blog area start =============== */}
@@ -20,33 +24,11 @@ function LatestNews() {
             </div>
           </div>
           <div className="row g-4">
-            <div className="col-lg-4 col-md-6">
-              <BlogCardAlpha
-                image={'/images/blog/blog-md-1.png'}
-                date="16 May 2022"
-                name="John Smith"
-                comments="5"
-                title="Mauris commodo massa vel diamnat feugiat sagittis"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <BlogCardAlpha
-                image={'/images/blog/blog-md-2.png'}
-                date="26 May 2022"
-                name="John Maria"
-                comments="7"
-                title="In tristique ultrices odio quis gravida. Pellentesque"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <BlogCardAlpha
-                image={'/images/blog/blog-md-3.png'}
-                date="17 May 2022"
-                name="Willium Crinchi"
-                comments="2"
-                title="Consequat lacus libero et leo viva ac sapien dui"
-              />
-            </div>
+            {data.blogs.map((blog, i) => (
+              <div key={i} className="col-lg-4 col-md-6">
+                <BlogCardAlpha {...blog} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

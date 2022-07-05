@@ -1,9 +1,14 @@
-import React from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
+
 import PackageCard from '../packageGrid/PackageCard';
+import { MockContext } from '../../../context';
 
 function OfferArea() {
+  const { data } = useContext(MockContext);
+
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
   return (
     <>
       <div className="package-area package-style-one pt-110 ">
@@ -21,54 +26,11 @@ function OfferArea() {
             </div>
           </div>
           <div className="row g-4">
-            <div className="col-lg-4 col-md-6">
-              <PackageCard
-                title="Etiam placerat dictum consequat an pellentesque."
-                date="3 Day & 2 Night"
-                image={'/images/package/p-alpha1.png'}
-                price="$91.00"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <PackageCard
-                title="Varius condimentum consequat frin pretium risus eu."
-                date="4 Day & 3 Night"
-                image={'/images/package/p-alpha2.png'}
-                price="$191.00"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <PackageCard
-                title="Sed ultricies sapien arcu, sed cong feugiat sapien."
-                date="4 Day & 3 Night"
-                image={'/images/package/p-alpha3.png'}
-                price="$191.00"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <PackageCard
-                title="Praesent sed elit mil In risus nullaam efficitur none."
-                date="3 Day & 4 Night"
-                image={'/images/package/p-alpha4.png'}
-                price="$181.00"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <PackageCard
-                title="Pellentesque habitant morbi malesua tristique senectus."
-                date="2 Day & 3 Night"
-                image={'/images/package/p-alpha5.png'}
-                price="$160.00"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <PackageCard
-                title="San francisco golden gate bridge, cable fog."
-                date="1 Day & 1 Night"
-                image={'/images/package/p-alpha6.png'}
-                price="$50.00"
-              />
-            </div>
+            {data.tours.map((tour, i) => (
+              <div key={i} className="col-lg-4 col-md-6">
+                <PackageCard {...tour} />
+              </div>
+            ))}
           </div>
           <div className="row text-center">
             <div className="package-bottom-btn">
