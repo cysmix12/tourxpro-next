@@ -67,19 +67,16 @@ function HeroArea() {
                         quis .
                       </p>
                       <div className="hero-btns">
-                        <Link
-                          href={`/package`}
-                          onClick={scrollTop}
-                          className="button-fill-primary"
-                        >
-                          View Adventure
+                        <Link href={`/package`} onClick={scrollTop} passHref>
+                          <a className="button-fill-primary">View Adventure</a>
                         </Link>
                         <Link
                           href={`/package`}
                           onClick={scrollTop}
                           className="button-outlined-primary"
+                          passHref
                         >
-                          Take A Tour
+                          <a className="button-fill-primary">Take A Tour</a>
                         </Link>
                       </div>
                     </div>
@@ -108,19 +105,16 @@ function HeroArea() {
                         quis .
                       </p>
                       <div className="hero-btns">
-                        <Link
-                          href={`/package`}
-                          onClick={scrollTop}
-                          className="button-fill-primary"
-                        >
-                          View Adventure
+                        <Link href={`/package`} onClick={scrollTop} passHref>
+                          <a className="button-fill-primary">View Adventure</a>
                         </Link>
                         <Link
                           href={`/package`}
                           onClick={scrollTop}
                           className="button-outlined-primary"
+                          passHref
                         >
-                          Take A Tour
+                          <a className="button-fill-primary">Take A Tour</a>
                         </Link>
                       </div>
                     </div>
@@ -148,19 +142,16 @@ function HeroArea() {
                         quis .
                       </p>
                       <div className="hero-btns">
-                        <Link
-                          href={`/package`}
-                          onClick={scrollTop}
-                          className="button-fill-primary"
-                        >
-                          View Adventure
+                        <Link href={`/package`} onClick={scrollTop} passHref>
+                          <a className="button-fill-primary">View Adventure</a>
                         </Link>
                         <Link
                           href={`/package`}
                           onClick={scrollTop}
                           className="button-outlined-primary"
+                          passHref
                         >
-                          Take A Tour
+                          <a className="button-fill-primary">Take A Tour</a>
                         </Link>
                       </div>
                     </div>
