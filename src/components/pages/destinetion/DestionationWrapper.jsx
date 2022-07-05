@@ -1,22 +1,30 @@
-import React from 'react';
+import { useContext } from 'react';
 
 import Pagination from '../../common/Pagination';
 import DestinationCart from './DestinationCart';
+import { MockContext } from '../../../context';
 
 function DestionationWrapper() {
+  const { data } = useContext(MockContext);
+
   return (
     <>
       <div className="destination-wrapper pt-110">
         <div className="container">
           <div className="row g-3">
-            <div className="col-lg-3 col-md-4 col-sm-6">
+            {data.destinations.map((destination, i) => (
+              <div key={i} className="col-lg-3 col-md-4 col-sm-6">
+                <DestinationCart {...destination} />
+              </div>
+            ))}
+            {/* <div className="col-lg-3 col-md-4 col-sm-6">
               <DestinationCart
                 image={'/images/destination/des-sm1.png'}
                 palce="Düsseldorf"
                 palceCount="45"
               />
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
+            </div> */}
+            {/* <div className="col-lg-3 col-md-4 col-sm-6">
               <DestinationCart
                 image={'/images/destination/des-sm2.png'}
                 palce="Augsburg"
@@ -92,7 +100,7 @@ function DestionationWrapper() {
                 palce="Middle Chaina"
                 palceCount="22"
               />
-            </div>
+            </div> */}
             <Pagination />
           </div>
         </div>

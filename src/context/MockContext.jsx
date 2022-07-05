@@ -4,6 +4,7 @@ const initial = {
   tours: [],
   tourGuides: [],
   blogs: [],
+  destinations: [],
 };
 
 export const MockContext = createContext({});
@@ -19,6 +20,9 @@ const mockReducer = (state, action) => {
     }
     case 'SET_BLOGS': {
       newState.blogs = [...action.payload];
+    }
+    case 'SET_DESTINATIONS': {
+      newState.destinations = [...action.payload];
     }
     default:
       break;
