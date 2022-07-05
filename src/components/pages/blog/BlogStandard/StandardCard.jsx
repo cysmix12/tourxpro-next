@@ -11,7 +11,7 @@ function StandardCard(props) {
       <div className="blog-card-gamma-full">
         <div className="blog-thumb">
           <Link onClick={scrollTop} href={`/blog-details`}>
-            <img src={props.image} alt="BlogStandardIMG" />
+            <img src={props.thumbImage} alt="BlogStandardIMG" />
           </Link>
           <div className="blog-lavel">
             <Link href={'#'}>Tourist</Link>
