@@ -1,8 +1,22 @@
+import { useContext, useEffect } from 'react';
+
 import BlogSidebarPage from '../src/components/pages/blog/BlodSidebar/BlogSidebar';
 import Header from '../src/components/common/Header';
 import Footer from '../src/components/common/Footer';
+import { getBlogs } from '../src/mock-api';
+import { MockContext } from '../src/context';
 
-const BlogSidebar = () => {
+const BlogSidebar = (props) => {
+  const { dispatch } = useContext(MockContext);
+
+  useEffect(() => {
+    if (props?.blogs)
+      dispatch({
+        type: 'SET_BLOGS',
+        payload: props.blogs,
+      });
+  }, [props]);
+
   return (
     <>
       <Header />
@@ -11,5 +25,15 @@ const BlogSidebar = () => {
     </>
   );
 };
+
+export async function getServerSideProps() {
+  const blogs = await getBlogs();
+
+  return {
+    props: {
+      blogs,
+    },
+  };
+}
 
 export default BlogSidebar;
