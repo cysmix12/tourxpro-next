@@ -1,7 +1,12 @@
 import { useContext, useEffect } from 'react';
 
 import MainLayout from '../src/components/layout/MainLayout';
-import { getTourPackages, getTourGuides, getBlogs } from '../src/mock-api';
+import {
+  getTourPackages,
+  getTourGuides,
+  getBlogs,
+  getDestinations,
+} from '../src/mock-api';
 import { MockContext } from '../src/context';
 
 const Homepage = (props) => {
@@ -23,6 +28,11 @@ const Homepage = (props) => {
         type: 'SET_BLOGS',
         payload: props.blogs,
       });
+    if (props?.destinations)
+      dispatch({
+        type: 'SET_DESTINATIONS',
+        payload: props.destinations,
+      });
   }, [props]);
 
   return <MainLayout />;
@@ -32,12 +42,14 @@ export async function getServerSideProps() {
   const tours = await getTourPackages();
   const tourGuides = await getTourGuides();
   const blogs = await getBlogs();
+  const destinations = await getDestinations();
 
   return {
     props: {
       tours,
       tourGuides,
       blogs,
+      destinations,
     },
   };
 }

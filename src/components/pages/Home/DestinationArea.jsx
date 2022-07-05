@@ -1,15 +1,17 @@
-import React from 'react';
+import { useContext } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import Swiper core and required modules
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
+
 import HomeOneDestinationCart from './HomeOneDestinationCart';
+import { MockContext } from '../../../context';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);
 
 function DestinationArea() {
+  const { data } = useContext(MockContext);
+
   const destinationSlider = {
     slidesPerView: 1,
     speed: 2000,
@@ -39,6 +41,7 @@ function DestinationArea() {
       },
     },
   };
+
   return (
     <>
       {/* =============== destination area start =============== */}
@@ -83,14 +86,12 @@ function DestinationArea() {
             className="swiper destination-slider-one"
           >
             <div className="swiper-wrapper">
-              <SwiperSlide className="swiper-slide">
-                <HomeOneDestinationCart
-                  image={'/images/destination/dest-3.png'}
-                  title="Marakana"
-                  place="15"
-                  hotel="16"
-                />
-              </SwiperSlide>
+              {data.destinations.map((destination, i) => (
+                <SwiperSlide key={i} className="swiper-slide">
+                  <HomeOneDestinationCart {...destination} />
+                </SwiperSlide>
+              ))}
+              {/* 
               <SwiperSlide className="swiper-slide">
                 <HomeOneDestinationCart
                   image={'/images/destination/dest-2.png'}
@@ -122,7 +123,7 @@ function DestinationArea() {
                   place="6"
                   hotel="12"
                 />
-              </SwiperSlide>
+              </SwiperSlide> */}
             </div>
           </Swiper>
         </div>

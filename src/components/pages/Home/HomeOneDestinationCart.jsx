@@ -15,12 +15,12 @@ function HomeOneDestinationCart(props) {
           <div className="d-card-content">
             <h3 className="d-card-title">
               <Link href={`/destination-details`} onClick={scrollTop}>
-                {props.title}
+                {props.place}
               </Link>
             </h3>
             <div className="d-card-info">
               <div className="place-count">
-                <span>{props.place}</span> Place
+                <span>{props.placeCount}</span> Places
               </div>
               <div className="hotel-count">
                 <span>{props.hotel}</span> Hotel
