@@ -1,14 +1,16 @@
-import React from 'react';
+import { useContext } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import Swiper core and required modules
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
+
 import DestinationCard2 from './DestinationCard2';
+import { MockContext } from '../../../context';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);
 
 function DestinationArea() {
+  const { data } = useContext(MockContext);
+
   const destinationSlider = {
     slidesPerView: 1,
     speed: 2000,
@@ -38,6 +40,7 @@ function DestinationArea() {
       },
     },
   };
+
   return (
     <>
       <div className="destination-area destination-style-two pt-110">
@@ -54,90 +57,12 @@ function DestinationArea() {
             className="swiper destination-slider-two"
           >
             <div className="">
-              <SwiperSlide className="swiper-slide">
-                <DestinationCard2
-                  image={'/images/destination/des-sm5.png'}
-                  placeName="Augsburg"
-                  palceCount="45"
-                  altNo="1"
-                />
-                <DestinationCard2
-                  image={'/images/destination/des-sm2.png'}
-                  placeName="Marakana"
-                  palceCount="25"
-                  altNo="2"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <DestinationCard2
-                  image={'/images/destination/des-sm3.png'}
-                  placeName="Nuremberg"
-                  palceCount="30"
-                  altNo="3"
-                />
-                <DestinationCard2
-                  image={'/images/destination/des-sm4.png'}
-                  placeName="Bielefeld"
-                  palceCount="35"
-                  altNo="4"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <DestinationCard2
-                  image={'/images/destination/des-sm5.png'}
-                  placeName="Düsseldorf"
-                  palceCount="30"
-                  altNo="5"
-                />
-                <DestinationCard2
-                  image={'/images/destination/des-sm5.png'}
-                  placeName="Wiesbaden"
-                  palceCount="45"
-                  altNo="6"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <DestinationCard2
-                  image={'/images/destination/des-sm7.png'}
-                  placeName="Chemnitz"
-                  palceCount="15"
-                  altNo="7"
-                />
-                <DestinationCard2
-                  image={'/images/destination/des-sm1.png'}
-                  placeName="Oberhausen"
-                  palceCount="24"
-                  altNo="8"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <DestinationCard2
-                  image={'/images/destination/des-sm6.png'}
-                  placeName="Nuremberg"
-                  palceCount="30"
-                  altNo="9"
-                />
-                <DestinationCard2
-                  image={'/images/destination/des-sm6.png'}
-                  placeName="Bielefeld"
-                  palceCount="35"
-                  altNo="10"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <DestinationCard2
-                  image={'/images/destination/des-sm1.png'}
-                  placeName="Chemnitz"
-                  palceCount="15"
-                  altNo="11"
-                />
-                <DestinationCard2
-                  image={'/images/destination/des-sm5.png'}
-                  placeName="Oberhausen"
-                  palceCount="24"
-                  altNo="12"
-                />
-              </SwiperSlide>
+              {data.destinations.map((destination, i) => (
+                <SwiperSlide key={i} className="swiper-slide">
+                  <DestinationCard2 {...destination} />
+                  <DestinationCard2 {...destination} />
+                </SwiperSlide>
+              ))}
             </div>
             <div className="testi-pagination text-center" />
           </Swiper>

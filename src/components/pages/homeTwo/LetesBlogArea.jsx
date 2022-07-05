@@ -1,11 +1,16 @@
-import React from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
+
 import BlogCardGama from '../blog/BlogGrid/BlogCardGama';
+import { MockContext } from '../../../context';
 
 function LetesBlogArea() {
+  const { data } = useContext(MockContext);
+
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
   return (
     <>
       <div className="blog-area blog-style-two pt-110">
@@ -29,30 +34,11 @@ function LetesBlogArea() {
             </div>
           </div>
           <div className="row g-4">
-            <div className="col-lg-4 col-md-6">
-              <BlogCardGama
-                title="Variustempor convallis, mi ligula an suscipit nunc, ornare suscipit."
-                thumbImage={'/images/blog/blog-md-1.png'}
-                writter="John Smith"
-                date="Novembar 16, 2021"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <BlogCardGama
-                title="Mauris commodo massa vel diamnat feugiat sagittis Nunc"
-                thumbImage={'/images/blog/blog-md-2.png'}
-                writter="John Dou"
-                date="Novembar 18, 2021"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <BlogCardGama
-                title="Nulla urna leo, volutpat eu maurisa eget luctus malesuada urna."
-                thumbImage={'/images/blog/blog-md-3.png'}
-                writter="Adam Sony"
-                date="Novembar 18, 2021"
-              />
-            </div>
+            {data.blogs.map((blog, i) => (
+              <div key={i} className="col-lg-4 col-md-6">
+                <BlogCardGama {...blog} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

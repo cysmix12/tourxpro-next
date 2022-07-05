@@ -7,16 +7,16 @@ function DestinationCard2(props) {
     <>
       <div className="destination-card-style-two">
         <div className="d-card-thumb">
-          <img src={props.image} alt={props.altNo} />
+          <img src={props.image} />
         </div>
         <div className="d-card-content">
           <h4 className="destination-title">
             <Link onClick={scrollTop} href={`/destination-details`}>
-              {props.placeName}
+              {props.place}
             </Link>
           </h4>
           <div className="place-count">
-            <span>{props.palceCount}</span> Place
+            <span>{props.placeCount}</span> Places
           </div>
         </div>
       </div>
