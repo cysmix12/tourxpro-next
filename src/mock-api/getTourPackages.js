@@ -37,5 +37,41 @@ export const getTourPackages = async () => {
       title: 'San francisco golden gate bridge, golden cable & fog.',
       price: '$110.50',
     },
+    {
+      image: '/images/package/p-alpha7.png',
+      date: '9 Day & 5 night',
+      title: 'Etiam placerat dictum consequat an pellentesque habitant.',
+      price: '$120.00',
+    },
+    {
+      image: '/images/package/p-alpha8.png',
+      date: '9 Day & 5 night',
+      title: 'Varius condimentum consequat frin Aenean pretium risus.',
+      price: '$119.00',
+    },
+    {
+      image: '/images/package/p-alpha9.png',
+      date: '9 Day & 5 night',
+      title: 'Praesent sed elit mil In risus nullaam efficitur none.',
+      price: '$159.00',
+    },
+    {
+      image: '/images/package/p-alpha10.png',
+      date: '9 Day & 5 night',
+      title: 'Sed ultricies sapien arcu, sed cong feugiat sapien.',
+      price: '$199.00',
+    },
+    {
+      image: '/images/package/p-alpha11.png',
+      date: '9 Day & 5 night',
+      title: 'Pellentesque habitant morbi malesua tristique senectus.',
+      price: '$119.00',
+    },
+    {
+      image: '/images/package/p-alpha8.png',
+      date: '9 Day & 5 night',
+      title: 'San francisco golden gate bridge, cable & fog.',
+      price: '$119.00',
+    },
   ];
 };
