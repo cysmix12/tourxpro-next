@@ -1,7 +1,11 @@
-import React from 'react';
+import { useContext } from 'react';
+
 import GuideCardGama from './GuideCardGama';
+import { MockContext } from '../../context';
 
 function GuideArea() {
+  const { data } = useContext(MockContext);
+
   return (
     <>
       <div className="guide-area guide-style-one pt-110">
@@ -14,24 +18,11 @@ function GuideArea() {
             </div>
           </div>
           <div className="row g-4">
-            <div className="col-lg-4 col-md-6">
-              <GuideCardGama
-                image={'/images/guide/guide-md4.png'}
-                name="Amam Groff"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <GuideCardGama
-                image={'/images/guide/guide-md5.png'}
-                name="Sebastian Mateo"
-              />
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <GuideCardGama
-                image={'/images/guide/guide-md6.png'}
-                name="Theodore Aiden"
-              />
-            </div>
+            {data.tourGuides.map((tourGuide, i) => (
+              <div key={i} className="col-lg-4 col-md-6">
+                <GuideCardGama {...tourGuide} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
