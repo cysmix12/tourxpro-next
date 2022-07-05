@@ -22,7 +22,7 @@ function BlogCardAlpha(props) {
           <div className="blog-body-top">
             <Link href={'#'} className="blog-writer">
               <>
-                <i className="bi bi-person-circle" /> By {props.name}
+                <i className="bi bi-person-circle" /> By {props.writter}
               </>
             </Link>
             <Link href={'#'} className="blog-comments">
