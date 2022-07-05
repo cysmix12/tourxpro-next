@@ -3,6 +3,7 @@ import { createContext, useMemo, useReducer } from 'react';
 const initial = {
   tours: [],
   tourGuides: [],
+  blogs: [],
 };
 
 export const MockContext = createContext({});
@@ -15,6 +16,9 @@ const mockReducer = (state, action) => {
     }
     case 'SET_TOUR_GUIDES': {
       newState.tourGuides = [...action.payload];
+    }
+    case 'SET_BLOGS': {
+      newState.blogs = [...action.payload];
     }
     default:
       break;
