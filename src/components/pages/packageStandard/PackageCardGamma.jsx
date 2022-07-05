@@ -16,7 +16,7 @@ function PackageCardGamma(props) {
         </div>
         <div className="package-card-body">
           <p className="card-lavel">
-            <i className="bi bi-clock" /> <span>{props.cardLavel}</span>
+            <i className="bi bi-clock" /> <span>{props.date}</span>
           </p>
           <h3 className="p-card-title">
             <Link onClick={scrollTop} href={`/package-details`}>
