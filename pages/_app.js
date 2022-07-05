@@ -1,6 +1,8 @@
 import SimpleReactLightbox from 'simple-react-lightbox';
 import Head from 'next/head';
 
+import { MockProvider } from '../src/context';
+
 import '../src/index.css';
 
 function MyApp({ Component, pageProps }) {
@@ -9,9 +11,11 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>TourXPro - Travels Tourism Agency</title>
       </Head>
-      <SimpleReactLightbox>
-        <Component {...pageProps} />
-      </SimpleReactLightbox>
+      <MockProvider>
+        <SimpleReactLightbox>
+          <Component {...pageProps} />
+        </SimpleReactLightbox>
+      </MockProvider>
     </>
   );
 }
