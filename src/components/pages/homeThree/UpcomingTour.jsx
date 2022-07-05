@@ -1,14 +1,19 @@
-import React from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
-// import Swiper core and required modules
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { EffectFade, Navigation, Pagination } from 'swiper';
+
+import { MockContext } from '../../../context';
+
 const scrollTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-// install Swiper modules
+
 SwiperCore.use([Navigation, Pagination, EffectFade]);
+
 function UpcomingTour() {
+  const { data } = useContext(MockContext);
+
   const upcommingTour = {
     slidesPerView: 1,
     speed: 1000,
@@ -40,6 +45,7 @@ function UpcomingTour() {
       },
     },
   };
+
   return (
     <>
       <div className="upcoming-tour-area pt-110 pb-110 chain">
@@ -77,53 +83,13 @@ function UpcomingTour() {
           </div>
           <div className="row align-items-center justify-content-center fadeffect">
             <div className="col-lg-12">
-              <Swiper className="swiper  upcoming-tour" {...upcommingTour}>
+              <Swiper className="swiper upcoming-tour" {...upcommingTour}>
                 <div className="swiper-wrapper">
-                  <SwiperSlide className="swiper-slide">
-                    <PackageCardBeta
-                      image="/images/package/best-s1.png"
-                      time="8 Day &amp; 9 night"
-                      title="Sed ultricies sapien arcu, sed cong
-                            feugiat sapien dignissim"
-                      price="$98.00"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <PackageCardBeta
-                      image="/images/package/best-s2.png"
-                      time="4 Day &amp; 4 night"
-                      title="varius condimentum consequat frin
-                            Aenean."
-                      price="$28.00"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <PackageCardBeta
-                      image="/images/package/best-s3.png"
-                      time="1 Day &amp; 2 night"
-                      title="Praesent sed elit mi. In risus
-                            nullaam ultricies sapien"
-                      price="$17.00"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <PackageCardBeta
-                      image="/images/package/best-s4.png"
-                      time="2 Day &amp; 3 night"
-                      title="Sed ultricies sapien arcu, sed cong
-                            feugiat sapien dignissim."
-                      price="$77.00"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <PackageCardBeta
-                      image="/images/package/best-s5.png"
-                      time="4 Day &amp; 3 night"
-                      title="Pellentesque habitant morbi malesua
-                            tristique senectus."
-                      price="$67.00"
-                    />
-                  </SwiperSlide>
+                  {data.tours.map((tour, i) => (
+                    <SwiperSlide key={i} className="swiper-slide">
+                      <PackageCardBeta {...tour} />
+                    </SwiperSlide>
+                  ))}
                 </div>
               </Swiper>
             </div>
@@ -152,7 +118,7 @@ function PackageCardBeta(props) {
             <img src={` ${props.image}`} alt="package images" />
           </a>
           <p className="card-lavel">
-            <i className="bi bi-clock" /> <span>{props.time}</span>
+            <i className="bi bi-clock" /> <span>{props.date}</span>
           </p>
         </div>
         <div className="package-card-body">

@@ -1,9 +1,15 @@
-import React from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
+
+import { MockContext } from '../../../context';
+
 const scrollTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
 function OfferPackage() {
+  const { data } = useContext(MockContext);
+
   return (
     <>
       <div className="package-area offer-package-style-one pt-110 pb-110">
@@ -89,60 +95,11 @@ function OfferPackage() {
                   aria-labelledby="pills-offer1"
                 >
                   <div className="row d-flex justify-content-center g-4">
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer1.png"
-                        time="2 Day &amp; 2 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$69.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer2.png"
-                        time="8 Day &amp; 9 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$699.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer3.png"
-                        time="3 Day &amp; 3 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$519.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer4.png"
-                        time="2 Day &amp; 2 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$69.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer5.png"
-                        time="5 Day &amp; 6 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$159.00 "
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-6 fadeffect">
-                      <OfferPackageCardBeta
-                        image="/images/destination/lastoffer6.png"
-                        time="6 Day &amp; 8 night"
-                        title="Etiam placerat dictum consequat an
-                              Pellentesque habitant morbi."
-                        price="$689.00 "
-                      />
-                    </div>
+                    {data.tours.map((tour, i) => (
+                      <div key={i} className="col-lg-4 col-md-6 fadeffect">
+                        <OfferPackageCardBeta {...tour} />
+                      </div>
+                    ))}
                   </div>
                   <div className="package-page-btn text-center mt-60">
                     <a href="package.html" className="button-fill-round">
@@ -266,7 +223,7 @@ function OfferPackageCardBeta(props) {
             <img src={` ${props.image}`} alt="" />
           </Link>
           <p className="card-lavel">
-            <i className="bi bi-clock" /> <span>{props.time}</span>
+            <i className="bi bi-clock" /> <span>{props.date}</span>
           </p>
         </div>
         <div className="package-card-body">

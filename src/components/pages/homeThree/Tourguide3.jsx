@@ -1,8 +1,13 @@
-import React from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
 
+import { MockContext } from '../../../context';
+
 function Tourguide3() {
+  const { data } = useContext(MockContext);
+
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
   return (
     <>
       <div className="guide-area guide-style-one pt-110">
@@ -20,111 +25,43 @@ function Tourguide3() {
             </div>
           </div>
           <div className="row d-flex justify-content-center g-4">
-            <div className="col-lg-4 col-md-6 col-md-10">
-              <div className="guide-card-beta">
-                <div className="guide-image">
-                  <img src={'/images/guide/guide31.png'} alt="guide images" />
-                  <ul className="guide-social-links d-flex justify-content-center flex-column gap-3">
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-instagram" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-facebook" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-twitter" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-whatsapp" />
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="guide-content">
-                  <Link href={`/guide`} onClick={scrollTop}>
-                    <h4 className="guide-name">Sebastian Mateo</h4>
-                  </Link>
-                  <h6 className="guide-designation">Tour Guide</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-md-10">
-              <div className="guide-card-beta">
-                <div className="guide-image">
-                  <img src={'/images/guide/guide32.png'} alt="" />
-                  <ul className="guide-social-links d-flex justify-content-center flex-column gap-3">
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-instagram" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-facebook" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-twitter" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-whatsapp" />
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="guide-content">
-                  <Link href={`/guide`} onClick={scrollTop}>
-                    <h4 className="guide-name">Theodore Aiden</h4>
-                  </Link>
-                  <h6 className="guide-designation">Tour Guide</h6>
+            {data.tourGuides.map((tourGuide, i) => (
+              <div className="col-lg-4 col-md-6 col-md-10">
+                <div className="guide-card-beta">
+                  <div className="guide-image">
+                    <img src={tourGuide.image} alt="guide images" />
+                    <ul className="guide-social-links d-flex justify-content-center flex-column gap-3">
+                      <li>
+                        <Link href={'#'}>
+                          <i className="bx bxl-instagram" />
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={'#'}>
+                          <i className="bx bxl-facebook" />
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={'#'}>
+                          <i className="bx bxl-twitter" />
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={'#'}>
+                          <i className="bx bxl-whatsapp" />
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="guide-content">
+                    <Link href={`/guide`} onClick={scrollTop}>
+                      <h4 className="guide-name">{tourGuide.name}</h4>
+                    </Link>
+                    <h6 className="guide-designation">Tour Guide</h6>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-md-10">
-              <div className="guide-card-beta">
-                <div className="guide-image">
-                  <img src={'/images/guide/guide33.png'} alt="" />
-                  <ul className="guide-social-links d-flex justify-content-center flex-column gap-3">
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-instagram" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-facebook" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-twitter" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'#'}>
-                        <i className="bx bxl-whatsapp" />
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="guide-content">
-                  <Link href={`/guide`} onClick={scrollTop}>
-                    <h4 className="guide-name">Lincoln Anthony</h4>
-                  </Link>
-                  <h6 className="guide-designation">Tour Guide</h6>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
