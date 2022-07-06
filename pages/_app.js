@@ -4,7 +4,7 @@ import Script from 'next/script';
 
 import { MockProvider } from '../src/context';
 
-import '../src/index.css';
+import '../src/index.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
