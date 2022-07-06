@@ -11,6 +11,10 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>TourXPro - Travels Tourism Agency</title>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
+        ></link>
       </Head>
       <MockProvider>
         <SimpleReactLightbox>
